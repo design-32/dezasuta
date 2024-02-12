@@ -1,0 +1,36 @@
+@charset "uft-8";
+
+ul {
+  display: flex;
+  list-style: none;
+  /* justify-content: space-between; */
+  gap: 30px;
+}
+
+.box-area {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  gap: 40px;
+}
+.box-area img {
+  width: 30%;
+}
+
+@media screen and (max-width: 767px) {
+  ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .box-area {
+    flex-direction: column;
+  }
+  .box-area img {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .box-area img {
+    width: 100%;
+  }
+}
