@@ -1,0 +1,32 @@
+@charset "uft-8";
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 12px;
+  padding-left: 2.6%;
+  /* 52 / 1990 = 0.026*100=2.6% */
+  padding-right: 7%;
+  /* 140 / 1990 = 0.070*100=7% */
+  position: absolute;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 9999;
+  /* 要素を最前面に持ってくる */
+}
+
+.header-nav ul {
+  display: flex;
+  gap: 75px;
+}
+
+.header-nav li {
+  color: #fff;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium",
+    "游ゴシック", "Yu Gothic", sans-serif;
+  font-weight: bold;
+}
+
+.logo {
+  width: 227px;
+}
