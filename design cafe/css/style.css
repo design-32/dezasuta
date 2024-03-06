@@ -1,4 +1,9 @@
 @charset "uft-8";
+body {
+  background-color: #e8d9bf;
+}
+
+/* header */
 .header-container {
   display: flex;
   align-items: center;
@@ -14,19 +19,186 @@
   z-index: 9999;
   /* 要素を最前面に持ってくる */
 }
-
 .header-nav ul {
   display: flex;
   gap: 75px;
 }
-
 .header-nav li {
   color: #fff;
   font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium",
     "游ゴシック", "Yu Gothic", sans-serif;
   font-weight: bold;
 }
-
 .logo {
   width: 227px;
+}
+
+/* lead */
+.lead {
+  text-align: center;
+}
+.lead-en {
+  padding-top: 103px;
+  padding-bottom: 53px;
+  font-size: 30px;
+}
+.lead h3 {
+  font-size: 82px;
+  line-height: 1.17;
+  font-weight: lighter;
+  padding-bottom: 49px;
+  /* 49 / 1990 */
+}
+.lead-text {
+  line-height: 1.65;
+  font-size: 23px;
+  padding-bottom: 90px;
+}
+
+/* 見出し */
+.heading {
+  height: 56px;
+}
+.heading-center {
+  margin: 0 auto; /* 中央にならない */
+}
+
+/* about us */
+#aboutus {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 91px;
+}
+.about-right p {
+  width: 410px;
+  height: 290px;
+  line-height: 1.63;
+}
+.about-right {
+  padding-left: 4.3%;
+}
+.about-right img {
+  padding-top: 69px;
+  padding-bottom: 44px;
+}
+.about-right h3 {
+  font-size: 44px;
+  font-weight: lighter;
+  line-height: 1.39;
+  padding-bottom: 31px;
+}
+.about-img {
+  border-bottom-right-radius: 70px;
+}
+
+/* menu */
+#menu {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-bottom: 74px;
+}
+.menu-logo {
+  padding-bottom: 42px;
+}
+#menu ul {
+  display: flex;
+  gap: 48px;
+}
+.menu-category {
+  color: #d30202;
+  font-size: 38px;
+  margin-top: -10px;
+  padding-left: 11px;
+  padding-bottom: 17px;
+}
+.menu-text {
+  font-size: 17px;
+  line-height: 1.47;
+}
+.menu-img {
+  border-top-right-radius: 50px;
+}
+
+/* garllery 上手くいかない */
+#gallery h2 {
+  padding-bottom: 17px;
+}
+.gallery-img {
+  display: flex;
+  justify-content: center;
+}
+#gallery {
+  max-width: 1000px;
+  padding-bottom: 54px;
+}
+
+/* event  文字を真ん中に持ってこれない*/
+.event-item {
+  display: flex;
+  gap: 2.5%;
+  font-size: 23px;
+  padding-bottom: 1.5%;
+}
+.event-box {
+  background-color: #ffffff;
+  width: 1000px;
+  height: 200px;
+  margin: 0 auto;
+  border: 3.7px solid #4f260b;
+}
+#event {
+  padding-bottom: 63px;
+}
+#event h2 {
+  padding-bottom: 27px;
+}
+.event-text {
+  border-bottom: 1.2px solid #4f260b;
+  /* 線の太さの見方がわからなくてものさしツールで測りました。 */
+}
+
+/* access */
+iframe {
+  width: 100%;
+  filter: grayscale(100%) invert(92%) contrast(83%);
+}
+#access h2 {
+  padding-bottom: 29px;
+}
+
+/* footer */
+#footer {
+  background-color: #ffffff;
+  width: 100%;
+  padding-bottom: 66px;
+}
+.footer-item {
+  display: flex;
+  gap: 53px;
+  padding: 3.7% 40.5% 3% 22.6%;
+  align-items: flex-start;
+}
+.footer-logo {
+  width: 229px;
+}
+.footer-item li {
+  color: #000000;
+  font-size: 20px;
+  line-height: 1.95;
+}
+.copyright {
+  text-align: center;
+  /* color: #000000; ここで設定できなのは何故でしょうか？ */
+  font-size: 16px;
+}
+.copyright p {
+  color: #000000;
+}
+
+/* to top */
+.totop {
+  position: fixed;
+  bottom: 227px;
+  right: 15.4%;
+  width: 125px;
 }
