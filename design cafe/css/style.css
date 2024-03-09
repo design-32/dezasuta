@@ -60,7 +60,7 @@ body {
   height: 56px;
 }
 .heading-center {
-  margin: 0 auto; /* 中央にならない */
+  text-align: center;
 }
 
 /* about us */
@@ -95,7 +95,7 @@ body {
 #menu {
   max-width: 1000px;
   margin: 0 auto;
-  padding-bottom: 74px;
+  padding: 0 10px 74px 10px;
 }
 .menu-logo {
   padding-bottom: 42px;
@@ -125,29 +125,31 @@ body {
 }
 .gallery-img {
   display: flex;
-  justify-content: center;
+  width: 20%;
 }
 #gallery {
-  max-width: 1000px;
   padding-bottom: 54px;
 }
 
-/* event  文字を真ん中に持ってこれない*/
 .event-item {
   display: flex;
   gap: 2.5%;
   font-size: 23px;
   padding-bottom: 1.5%;
+  max-width: 694px;
+  margin: 0 auto;
 }
 .event-box {
   background-color: #ffffff;
-  width: 1000px;
-  height: 200px;
+  max-width: 1000px;
   margin: 0 auto;
   border: 3.7px solid #4f260b;
+  padding: 38px 0;
 }
 #event {
-  padding-bottom: 63px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 10px 63px 10px;
 }
 #event h2 {
   padding-bottom: 27px;
@@ -161,6 +163,7 @@ body {
 iframe {
   width: 100%;
   filter: grayscale(100%) invert(92%) contrast(83%);
+  vertical-align: bottom;
 }
 #access h2 {
   padding-bottom: 29px;
@@ -200,5 +203,5 @@ iframe {
   position: fixed;
   bottom: 227px;
   right: 15.4%;
-  width: 125px;
+  width: 6.3%;
 }
