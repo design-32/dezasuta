@@ -36,6 +36,7 @@ body {
 /* lead */
 .lead {
   text-align: center;
+  padding: 0 10px 0 10px;
 }
 .lead-en {
   padding-top: 103px;
@@ -67,18 +68,19 @@ body {
 #aboutus {
   display: flex;
   justify-content: center;
-  padding-bottom: 91px;
+  padding: 0 10px 91px 10px;
+  gap: 6.9%;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 .about-right p {
-  width: 410px;
-  height: 290px;
+  max-width: 410px;
   line-height: 1.63;
 }
 .about-right {
-  padding-left: 4.3%;
+  padding-top: 60px;
 }
 .about-right img {
-  padding-top: 69px;
   padding-bottom: 44px;
 }
 .about-right h3 {
@@ -102,7 +104,7 @@ body {
 }
 #menu ul {
   display: flex;
-  gap: 48px;
+  gap: 4.9%;
 }
 .menu-category {
   color: #d30202;
@@ -119,7 +121,7 @@ body {
   border-top-right-radius: 50px;
 }
 
-/* garllery 上手くいかない */
+/* garllery */
 #gallery h2 {
   padding-bottom: 17px;
 }
@@ -131,6 +133,7 @@ body {
   padding-bottom: 54px;
 }
 
+/* event */
 .event-item {
   display: flex;
   gap: 2.5%;
@@ -172,14 +175,15 @@ iframe {
 /* footer */
 #footer {
   background-color: #ffffff;
-  width: 100%;
   padding-bottom: 66px;
 }
 .footer-item {
   display: flex;
-  gap: 53px;
-  padding: 3.7% 40.5% 3% 22.6%;
+  gap: 2.8%;
+  padding: 3.7% 10px 3% 10px;
   align-items: flex-start;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 .footer-logo {
   width: 229px;
