@@ -97,6 +97,7 @@ body {
 }
 .about-img {
   border-bottom-right-radius: 15%;
+  width: 500px;
 }
 
 /* menu */
@@ -125,6 +126,7 @@ body {
 }
 .menu-img {
   border-top-right-radius: 15%;
+  width: 300px;
 }
 
 /* garllery */
