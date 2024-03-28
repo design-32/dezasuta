@@ -132,7 +132,6 @@ body {
 }
 .menu-img img {
   border-top-right-radius: 15%;
-  width: 300px;
 }
 
 /* garllery */
@@ -173,9 +172,8 @@ body {
 .event-logo {
   margin-bottom: 27px;
 }
-.event-text {
+.event-text a {
   border-bottom: 1.2px solid #4f260b;
-  /* 線の太さの見方がわからなくてものさしツールで測りました。 */
 }
 
 /* access */
@@ -401,9 +399,6 @@ iframe {
   .menu-category {
     font-size: 40px;
     padding-bottom: 26px;
-    max-width: 300px;
-    margin: 0 auto;
-    margin-top: -10px;
   }
   .menu-text {
     font-size: 17px;
@@ -436,7 +431,6 @@ iframe {
   }
   .event-text {
     margin-bottom: 22px;
-    max-width: 392px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -446,6 +440,9 @@ iframe {
   }
   .event-box {
     padding: 11px 0px;
+  }
+  .event-text a {
+    display: inline;
   }
 
   /* access */
