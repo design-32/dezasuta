@@ -218,24 +218,34 @@
       });
     });
 
-    var windowWidth = window.innerWidth;
-    if (windowWidth > 767) {
-      $(".gallery-img").slick({
-        arrows: false,
-        autoplay: true,
-        autoplaySpeed: 2000,
-        slidesToShow: 5,
-        slidesToScroll: 1
+    $(function () {
+      function initSlick() {
+        var windowWidth = window.innerWidth;
+        if (windowWidth > 767) {
+          $(".gallery-img").slick({
+            arrows: false,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            slidesToShow: 5,
+            slidesToScroll: 1
+          });
+        } else {
+          $(".gallery-img").slick({
+            arrows: false,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            slidesToShow: 1,
+            slidesToScroll: 1
+          });
+        };
+      };
+
+      initSlick();
+      $(window).resize(function () {
+        $(".gallery-img").slick("unslick");
+        initSlick();
       });
-    } else {
-      $(".gallery-img").slick({
-        arrows: false,
-        autoplay: true,
-        autoplaySpeed: 2000,
-        slidesToShow: 1,
-        slidesToScroll: 1
-      });
-    }
+    });
 
     // ハンバーガーメニュー
     $(function () {
