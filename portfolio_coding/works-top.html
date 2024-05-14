@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YUKI OGAWA</title>
+
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <script>
+    (function (d) {
+      var config = {
+        kitId: 'dml7sbm',
+        scriptTimeout: 3000,
+        async: true
+      },
+        h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+    })(document);
+  </script>
+</head>
+
+<body>
+  <header id="header">
+    <nav class="header-nav">
+      <div class="border">
+        <ul class="nav-section nav">
+          <a href="/about.html">
+            <li class="dotfont-color">わたし</li>
+          </a>
+          <a href="/works-top.html">
+            <li class="dotfont-color">しごと</li>
+          </a>
+          <a href="/contact.html">
+            <li class="dotfont-color">お問い合わせ</li>
+          </a>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <section class="page-set section">
+    <h2 class="section-title dotfont-color">
+      ▶︎ しごと
+    </h2>
+    <div class="category-container">
+      <p class="category-text dotfont-color">カテゴリー</p>
+      <div class="border">
+        <ul class="category-list">
+          <li class="category dotfont">すべて</li>
+          <li class="category dotfont">ウェブサイト</li>
+          <li class="category dotfont">バナー</li>
+          <li class="category dotfont">コーディング</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 実績写真 -->
+    <div class="works-top-img">
+      <a href="#work6"><img src="images/kadai6.jpg" alt="課題6"></a>
+      <a href="#work5"><img src="images/kadai5.jpg" alt="課題5"></a>
+      <a href="#work4"><img src="images/kadai4.jpg" alt="課題4"></a>
+      <a href="#work3"><img src="images/kadai3.jpg" alt="課題3"></a>
+      <a href="#work2"><img src="images/kadai2.jpg" alt="課題2"></a>
+      <a href="#work1"><img src="images/kadai1.jpg" alt="課題1"></a>
+    </div>
+    <!-- <ul class="pagination">
+      <li class="disabled">
+        <a href="#"><i class="fas fa-angle-left"></i></a>
+      </li>
+      <li class="active"><a href="#">1</a></li>
+      <a href="#"><i class="fas fa-angle-right"></i></a>
+      </li>
+    </ul> -->
+    <ul class="pagination">
+      <a href="">
+        <li class="btn-text dotfont">&lt;</li>
+      </a>
+      <a href="">
+        <li class="this-page btn-text dotfont">1</li>
+      </a>
+      <a href="">
+        <li class="btn-text dotfont">&gt;</li>
+      </a>
+    </ul>
+  </section>
+</body>
+
+</html>
