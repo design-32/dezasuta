@@ -18,28 +18,43 @@
         h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
     })(document);
   </script>
+  <script type="text/javascript">
+    let submitted = false;
+  </script>
+  <iframe name="hidden_iframe" id="hidden_iframe" style="display: none"
+    onload="if(submitted){window.location='thanks.html#thanks';}"></iframe>
 </head>
 
 <body>
   <header id="header">
-    <nav class="header-nav">
+    <nav>
       <div class="border">
-        <ul class="nav-section nav">
-          <a href="/about.html">
-            <li class="dotfont-color">わたし</li>
-          </a>
-          <a href="/works-top.html">
-            <li class="dotfont-color">しごと</li>
-          </a>
-          <a href="/contact.html">
-            <li class="dotfont-color">お問い合わせ</li>
-          </a>
+        <ul class="nav-area nav">
+          <li class="dotfont-color">
+            <a href="about.html#about">わたし</a>
+          </li>
+          <li class="dotfont-color">
+            <a href="works-top.html#works">しごと</a>
+          </li>
+          <li class="dotfont-color">
+            <a href="contact.html#contact">お問い合わせ</a>
+          </li>
         </ul>
       </div>
     </nav>
+    <div class="sns-nav">
+      <p>SNS</p>
+      <div class="sns-icon">
+        <a href="https://www.instagram.com/design_32__/" class="sns-insta"><img src="images/insta.png" alt="インスタ" />
+        </a>
+        <a href="https://twitter.com/design_32__" class="sns-x">
+          <img src="images/x.png" alt="x" />
+        </a>
+      </div>
+    </div>
   </header>
 
-  <section class="page-set section">
+  <section id="contact" class="page-set section">
     <h2 class="section-title dotfont-color">
       ▶︎ お問い合わせ
     </h2>
@@ -49,7 +64,75 @@
       お気軽にご連絡いただけると嬉しいです。お問合わせお待ちしております。 <br>
       （※の箇所は必須事項になっております。）
     </p>
+
+
+    <form class="c-form"
+      action="https://docs.google.com/forms/u/1/d/e/1FAIpQLSdGPHMuu9BLTnez2Fl618jsnaxLwOy5aSaDJtROHNq6OqH5wA/formResponse"
+      method="POST" target="hidden_iframe" onsubmit="submitted=true;" class="c-form">
+      <div class="c-form__item">
+        <label class="c-form__label dotfont-color" for="field-name">お名前<span class="c-form__required">※</span></label>
+        <input name="entry.620674150" class="c-form__input" id="field-name" placeholder="山田　花子" type="text"
+          required="required" />
+      </div>
+      <div class="c-form__item">
+        <label class="c-form__label dotfont-color" for="field-mail">メールアドレス<span
+            class="c-form__required">※</span></label>
+        <input name="entry.834381373" class="c-form__input" id="field-mail" placeholder="aaaaaa@mail.com" type="email"
+          required="required" />
+      </div>
+      <div class="c-form__item">
+        <label class="c-form__label dotfont-color for=" field-tel">電話番号</label>
+        <input name="entry.1744720872" class="c-form__input" id="field-mail" placeholder="00011112222" type="tel"
+          required="required" />
+      </div>
+      <div class="c-form__item">
+        <label class="c-form__label dotfont-color" for="field-message">お問い合わせ内容<span
+            class="c-form__required">※</span></label>
+        <textarea name="entry.58023294" class="c-form__input" id="field-message"
+          placeholder="お気軽にご質問・お問い合わせください◎"></textarea>
+      </div>
+      <div class="c-form__submit">
+        <button type="submit" class="dotfont">送信する</button>
+      </div>
+    </form>
   </section>
+
+  <footer id="footer">
+    <div class="footer-container">
+      <div class="footer-area">
+        <div class="footer-logo">
+          <a href="index.html">
+            <p class="footer-logo-over dotfont dotfont-color">
+              YUKI <br />
+              OGAWA
+            </p>
+            <p class="footer-logo-under dotfont">
+              YUKI <br />
+              OGAWA
+            </p>
+          </a>
+        </div>
+        <nav>
+          <ul class="footer-nav nav">
+            <a href="about.html#about">
+              <li class="dotfont-color">わたし</li>
+            </a>
+            <a href="works-top.html#works">
+              <li class="dotfont-color">しごと</li>
+            </a>
+            <a href="contact.html#contact">
+              <li class="dotfont-color">お問い合わせ</li>
+            </a>
+          </ul>
+        </nav>
+      </div>
+      <div class="sns-btn">
+        <a href="https://www.instagram.com/design_32__/" class="insta-btn"><img src="images/insta_maru.png"
+            alt="インスタ" /></a>
+        <a href="https://twitter.com/design_32__"><img src="images/x_maru.png" alt="x" /></a>
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>

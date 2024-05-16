@@ -2,84 +2,123 @@
 <html lang="ja">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>YUKI OGAWA</title>
 
-  <link rel="stylesheet" href="./css/reset.css">
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/reset.css" />
+  <link rel="stylesheet" href="./css/style.css" />
   <script>
     (function (d) {
       var config = {
-        kitId: 'dml7sbm',
+        kitId: "dml7sbm",
         scriptTimeout: 3000,
-        async: true
+        async: true,
       },
-        h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+        h = d.documentElement,
+        t = setTimeout(function () {
+          h.className =
+            h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+        }, config.scriptTimeout),
+        tk = d.createElement("script"),
+        f = false,
+        s = d.getElementsByTagName("script")[0],
+        a;
+      h.className += " wf-loading";
+      tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+      tk.async = true;
+      tk.onload = tk.onreadystatechange = function () {
+        a = this.readyState;
+        if (f || (a && a != "complete" && a != "loaded")) return;
+        f = true;
+        clearTimeout(t);
+        try {
+          Typekit.load(config);
+        } catch (e) { }
+      };
+      s.parentNode.insertBefore(tk, s);
     })(document);
   </script>
 </head>
 
 <body>
   <header id="header">
-    <nav class="header-nav">
+    <nav>
       <div class="border">
-        <ul class="nav-section nav">
-          <a href="/about.html">
-            <li class="dotfont-color">わたし</li>
-          </a>
-          <a href="/works-top.html">
-            <li class="dotfont-color">しごと</li>
-          </a>
-          <a href="/contact.html">
-            <li class="dotfont-color">お問い合わせ</li>
-          </a>
+        <ul class="nav-area nav">
+          <li class="dotfont-color">
+            <a href="about.html#about">わたし</a>
+          </li>
+          <li class="dotfont-color">
+            <a href="works-top.html#works">しごと</a>
+          </li>
+          <li class="dotfont-color">
+            <a href="contact.html#contact">お問い合わせ</a>
+          </li>
         </ul>
       </div>
     </nav>
+    <div class="sns-nav">
+      <p>SNS</p>
+      <div class="sns-icon">
+        <a href="https://www.instagram.com/design_32__/" class="sns-insta"><img src="images/insta.png" alt="インスタ" />
+        </a>
+        <a href="https://twitter.com/design_32__" class="sns-x">
+          <img src="images/x.png" alt="x" />
+        </a>
+      </div>
+    </div>
   </header>
 
   <section id="about" class="page-set section">
     <div class="profile-container">
-      <h2 class="section-title dotfont-color">
-        ▶︎ わたしのこと
-      </h2>
+      <h2 class="section-title dotfont-color">▶︎ わたしのこと</h2>
       <div class="profile-box">
         <div class="profile-img2">
-          <img src="images/profile.jpg" alt="プロフィール写真">
+          <img src="images/profile.jpg" alt="プロフィール写真" />
         </div>
         <div>
-          <div class="profile-text">
-            <p class="job-cat dotfont-color"> Web designer <br>
+          <div>
+            <p class="job-cat dotfont-color">
+              Web designer <br />
               Engineer
             </p>
-            <p class="name-en dotfont-color">YUKI OGAWA</p>
+            <div class="name-items">
+              <p class="name-en dotfont-color">YUKI OGAWA</p>
+              <div class="sns-btn">
+                <a href="https://www.instagram.com/design_32__/" class="insta-btn"><img src="images/insta_maru.png"
+                    alt="インスタ" /></a>
+                <a href="https://twitter.com/design_32__"><img src="images/x_maru.png" alt="x" /></a>
+              </div>
+            </div>
             <p class="name-ja dotfont-color">オガワ　ユウキ</p>
           </div>
           <div class="profile-list-container">
             <div class="profile-list">
               <ul>
                 <li class="dotfont-color">Lv.29</li>
-                <li class="dotfont-color">生年月日</li>
-                <li class="dotfont-color">タイプ</li>
-                <li class="dotfont-color">せいそく</li>
+                <li class="dotfont-color">生年月日 :</li>
+                <li class="dotfont-color">タイプ :</li>
+                <li class="dotfont-color">せいそく :</li>
               </ul>
               <ul>
-                <li class="dotfont-color">せいかく</li>
-                <li class="dotfont-color">とくぎ</li>
-                <li class="dotfont-color">ざゆうの銘</li>
+                <li class="dotfont-color">せいかく :</li>
+                <li class="dotfont-color">とくぎ :</li>
+                <li class="dotfont-color">ざゆうの銘 :</li>
               </ul>
             </div>
             <div class="profile-list">
               <ul>
-                <li class="dotfont">:1994.6.1</li>
-                <li class="dotfont">:O型</li>
-                <li class="dotfont">:ほっかいどう</li>
+                <li class="dotfont">1994.6.1</li>
+                <li class="dotfont">O型</li>
+                <li class="dotfont">ほっかいどう</li>
               </ul>
               <ul>
-                <li class="dotfont">:あまのじゃく</li>
-                <li class="dotfont">:ねむる</li>
-                <li class="dotfont">:「“ムリ“ではなく“ムズカシイ“である！！」</li>
+                <li class="dotfont">あまのじゃく</li>
+                <li class="dotfont">ねむる</li>
+                <li class="dotfont dotfont-last">
+                  「“ムリ“ではなく“ムズカシイ“である！！」
+                </li>
               </ul>
             </div>
           </div>
@@ -88,10 +127,12 @@
 
       <div class="border">
         <div class="box-model">
-          <p class="box-text dotfont">予定日ぴったりに生まれる。 <br>
-            「ミルクの飲みっぷりがよく、病室にギャラリーをつくった。」 <br>
-            「生後8ヶ月、フェリーの上で初めての歩行を見せ、家族をおどろかせる。」 <br>
-            など伝説を作ったが、未だにそれが役に立ったことはない。 <br>
+          <p class="box-text dotfont">
+            予定日ぴったりに生まれる。 <br />
+            「ミルクの飲みっぷりがよく、病室にギャラリーをつくった。」 <br />
+            「生後8ヶ月、フェリーの上で初めての歩行を見せ、家族をおどろかせる。」
+            <br />
+            など伝説を作ったが、未だにそれが役に立ったことはない。 <br />
             初めて買ったゲームタイトルは『ポケットモンスター　サファイア』。
           </p>
         </div>
@@ -101,7 +142,7 @@
     <div class="profile-container">
       <div class="profile-box">
         <div class="profile-img2">
-          <img src="images/sunny.jpg" alt="サニー写真">
+          <img src="images/sunny.jpg" alt="サニー写真" />
         </div>
         <div>
           <div class="profile-text">
@@ -112,26 +153,32 @@
             <div class="profile-list">
               <ul>
                 <li class="dotfont-color">Lv.5</li>
-                <li class="dotfont-color">生年月日</li>
-                <li class="dotfont-color">しゅるい</li>
-                <li class="dotfont-color">せいそく</li>
+                <li class="dotfont-color">生年月日:</li>
+                <li class="dotfont-color">しゅるい:</li>
+                <li class="dotfont-color">せいそく:</li>
               </ul>
               <ul>
-                <li class="dotfont-color">せいかく</li>
-                <li class="dotfont-color">とくぎ</li>
-                <li class="dotfont-color">一言</li>
+                <li class="dotfont-color">せいかく:</li>
+                <li class="dotfont-color">とくぎ:</li>
+                <li class="dotfont-color">一言:</li>
               </ul>
             </div>
             <div class="profile-list">
               <ul>
-                <li class="dotfont">:2018.12.24</li>
-                <li class="dotfont">:ラブラドール・ボーダーコリーのミックス</li>
-                <li class="dotfont">:ほっかいどう</li>
+                <li class="dotfont">2018.12.24</li>
+                <li class="dotfont">
+                  ラブラドール・ボーダーコリーのミックス
+                </li>
+                <li class="dotfont">ほっかいどう</li>
               </ul>
               <ul>
-                <li class="dotfont">:こうきしんおうせい　だけど　おくびょう</li>
-                <li class="dotfont">:どろぼう</li>
-                <li class="dotfont">:「もっとうまくフリスビーを投げてほしい。」</li>
+                <li class="dotfont">
+                  こうきしんおうせい　だけど　おくびょう
+                </li>
+                <li class="dotfont">どろぼう</li>
+                <li class="dotfont">
+                  「もっとうまくフリスビーを投げてほしい。」
+                </li>
               </ul>
             </div>
           </div>
@@ -140,9 +187,12 @@
 
       <div class="border">
         <div class="box-model">
-          <p class="box-text dotfont">クリスマスイヴ生まれのおんなのこ。9ひき きょうだい。 <br>
-            名前の由来は、「太陽」ではなく、我が家に来たのが3月2日だったから。 <br>
-            天下の大どろぼうで、数秒のすきがあればいつでもねらいに行く。 <br>
+          <p class="box-text dotfont">
+            クリスマスイヴ生まれのおんなのこ。9ひき きょうだい。 <br />
+            名前の由来は、「太陽」ではなく、我が家に来たのが3月2日だったから。
+            <br />
+            天下の大どろぼうで、数秒のすきがあればいつでもねらいに行く。
+            <br />
             三度のメシよりフリスビーがすき。
           </p>
         </div>
@@ -152,43 +202,42 @@
     <div class="about-area">
       <div class="about-box">
         <div class="about-box-text">
-          <p class="about-item">
-            “
-          </p>
+          <p class="about-item">“</p>
           <p class="about-lead dotfont">
-            心を動かされる「しゅんかん」が <br>
-            たくさんあった。 <br>
+            心を動かされる「しゅんかん」が <br />
+            たくさんあった。 <br />
             今度は私がつくりたい。
           </p>
           <p class="about-text">
-            ワクワクに正直で、 <br>
-            人よりほんの少しゲームが好きで、 <br>
-            漫画が人生の教科書。 <br>
+            ワクワクに正直で、 <br />
+            人よりほんの少しゲームが好きで、 <br />
+            漫画が人生の教科書。 <br />
             好きにとことん一直線、そんな人間です。
           </p>
         </div>
         <div>
-          <img src="images/game.jpg" alt="ゲームボーイアドバンス">
+          <img src="images/game.jpg" alt="ゲームボーイアドバンス" />
         </div>
       </div>
       <div>
         <p class="profile-text profile-text-padding">
-          埼玉県出身、北海道興部町（おこっぺ）育ち・在住。 <br>
-          見渡す限り牛！牛！牛！の人口より牛の数の方が多い町で、大きな黒犬の「サニー」と暮らしています。 <br>
+          埼玉県出身、北海道興部町（おこっぺ）育ち・在住。 <br />
+          見渡す限り牛！牛！牛！の人口より牛の数の方が多い町で、大きな黒犬の「サニー」と暮らしています。
+          <br />
           サニーとの散歩から始まり、サニーと眠るのが毎日のルーティーン。
         </p>
         <p class="profile-text profile-text-padding">
-          私の冒険の始まりは、小学2年生のクリスマス前。 <br>
-          “今年こそゲームが欲しい娘” <br>
-          vs <br>
-          “絶対にゲームを買いたくない母” <br>
-          よくある構図。 <br>
-          その一歩も譲らない攻防を見て、母に内緒で祖父が買ってくれた。 <br>
+          私の冒険の始まりは、小学2年生のクリスマス前。 <br />
+          “今年こそゲームが欲しい娘” <br />
+          vs <br />
+          “絶対にゲームを買いたくない母” <br />
+          よくある構図。 <br />
+          その一歩も譲らない攻防を見て、母に内緒で祖父が買ってくれた。 <br />
           （もちろん祖父は母に怒られた）
         </p>
         <p class="profile-text profile-text-padding2">
-          「ゲームは一日15分！」（30分だったかも） <br>
-          そんな一瞬で過ぎてしまうような母との約束があっても、 <br>
+          「ゲームは一日15分！」（30分だったかも） <br />
+          そんな一瞬で過ぎてしまうような母との約束があっても、 <br />
           40.8×61.2mmの小さな画面の中の冒険に、毎日ワクワクした。
         </p>
         <p class="profile-text bold-font">
@@ -199,68 +248,134 @@
         </p>
       </div>
     </div>
-    </div>
-
 
     <!-- わざ -->
     <div>
-      <h2 class="section-title dotfont-color">
-        わざ
-      </h2>
+      <h2 class="section-title dotfont-color">わざ</h2>
     </div>
     <div class="skill-box">
       <div class="skill-list">
         <ul>
-          <li class="skill-text dotfont">・</li>
-          <li class="skill-text dotfont">・</li>
-          <li class="skill-text dotfont">・</li>
-          <li class="skill-text dotfont">・</li>
-          <li class="skill-text dotfont">・</li>
+          <li class="dotfont">・Illustrator</li>
+          <li class="dotfont">・Photoshop</li>
+          <li class="dotfont">・HTML</li>
+          <li class="dotfont">・CSS</li>
+          <li class="dotfont">・JavaScript</li>
         </ul>
-        <ul>
-          <li class="skill-text dotfont">Illustrator</li>
-          <li class="skill-text dotfont">Photoshop</li>
-          <li class="skill-text dotfont">HTML</li>
-          <li class="skill-text dotfont">CSS</li>
-          <li class="skill-text dotfont">JavaScript</li>
-        </ul>
+        <div gage-area>
+          <div class="skill-gage"></div>
+          <div class="skill-gage"></div>
+          <div class="skill-gage"></div>
+          <div class="skill-gage"></div>
+          <div class="skill-gage"></div>
+        </div>
       </div>
       <div class="skill-list">
         <ul>
-          <li class="skill-text dotfont">・</li>
-          <li class="skill-text dotfont">・</li>
-        </ul>
-        <ul>
-          <li class="skill-text dotfont">CapCut</li>
-          <li class="skill-text dotfont">Premiere Pro</li>
+          <li class="dotfont">・CapCut</li>
+          <li class="dotfont">・Premiere Pro</li>
         </ul>
       </div>
     </div>
 
     <!-- らぶ -->
     <div>
-      <h2 class="section-title dotfont-color">
-        らぶ
-      </h2>
+      <h2 class="section-title dotfont-color">らぶ</h2>
     </div>
     <div class="love-list">
       <ul>
-        <li class="love-text dotfont">ゲーム▶︎</li>
-        <li class="love-text dotfont">マンガ（人生の教科書）▶︎</li>
-        <li class="love-text dotfont">食べ物▶︎</li>
-      </ul>
-      <!-- <ul>
-        <li class="love-text dotfont">▶︎</li>
-        <li class="love-text dotfont">▶︎</li>
-        <li class="love-text dotfont">▶︎</li>
-      </ul> -->
-      <ul>
-        <li class="love-text dotfont">スプラトゥーン・APEX・逆転裁判シリーズ・ストリートファイター6（見る専）</li>
-        <li class="love-text dotfont">『SLAM DUNK』・『ハイキュー!!』</li>
-        <li class="love-text dotfont">やきにく・からあげ</li>
+        <li class="love-text dotfont">
+          ゲーム▶︎
+          <span>
+            スプラトゥーン・APEX・逆転裁判シリーズ・ストリートファイター6（見る専）
+          </span>
+        </li>
+        <li class="love-text dotfont">
+          マンガ（人生の教科書）▶︎
+          <span> 『SLAM DUNK』・『ハイキュー!!』 </span>
+        </li>
+        <li class="love-text dotfont">
+          食べ物▶︎
+          <span> やきにく・からあげ </span>
+        </li>
       </ul>
     </div>
   </section>
+
+  <section id="contact" class="contact-contents section">
+    <div class="box-area">
+      <div class="question-box">
+        <img src="./images/question box.png" alt="まだ見ぬ冒険" />
+        <span class="question-line question-line01"></span>
+        <span class="question-line question-line02"></span>
+        <span class="question-line question-line03"></span>
+        <span class="question-line question-line04"></span>
+        <span class="question-line question-line05"></span>
+        <span class="question-line question-line06"></span>
+        <span class="question-line question-line07"></span>
+        <span class="question-line question-line08"></span>
+        <span class="question-line question-line09"></span>
+      </div>
+      <div class="border-box">
+        <p class="dotfont-color">
+          あ！　まだ見ぬ<br />
+          ぼうけんが　とびだしてきた！
+        </p>
+      </div>
+    </div>
+    <div class="contact-area">
+      <h2 class="contact-heading dotfont">▶︎ お問い合わせ</h2>
+      <p>
+        お仕事のご依頼やご相談（オンラインも可能）、<br />
+        「一緒にこんなことやってみない？」など<br />
+        お気軽にご連絡いただけると嬉しいです。<br />
+        お問合わせお待ちしております。<br />
+      </p>
+      <div class="contact-box border">
+        <div class="contact-btn">
+          <a href="./contact.html" class="dotfont-color"> する </a>
+          <a href="./contact.html"> ちょっとしてみる </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="footer">
+    <div class="footer-container">
+      <div class="footer-area">
+        <div class="footer-logo">
+          <a href="index.html">
+            <p class="footer-logo-over dotfont dotfont-color">
+              YUKI <br />
+              OGAWA
+            </p>
+            <p class="footer-logo-under dotfont">
+              YUKI <br />
+              OGAWA
+            </p>
+          </a>
+        </div>
+        <nav>
+          <ul class="footer-nav nav">
+            <a href="about.html#about">
+              <li class="dotfont-color">わたし</li>
+            </a>
+            <a href="works-top.html#works">
+              <li class="dotfont-color">しごと</li>
+            </a>
+            <a href="contact.html#contact">
+              <li class="dotfont-color">お問い合わせ</li>
+            </a>
+          </ul>
+        </nav>
+      </div>
+      <div class="sns-btn">
+        <a href="https://www.instagram.com/design_32__/" class="insta-btn"><img src="images/insta_maru.png"
+            alt="インスタ" /></a>
+        <a href="https://twitter.com/design_32__"><img src="images/x_maru.png" alt="x" /></a>
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>

@@ -1,64 +1,121 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html>
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>YUKI OGAWA</title>
 
-  <link rel="stylesheet" href="./css/reset.css">
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/reset.css" />
+  <link rel="stylesheet" href="./css/style.css" />
   <script>
     (function (d) {
       var config = {
-        kitId: 'dml7sbm',
+        kitId: "dml7sbm",
         scriptTimeout: 3000,
-        async: true
+        async: true,
       },
-        h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+        h = d.documentElement,
+        t = setTimeout(function () {
+          h.className =
+            h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+        }, config.scriptTimeout),
+        tk = d.createElement("script"),
+        f = false,
+        s = d.getElementsByTagName("script")[0],
+        a;
+      h.className += " wf-loading";
+      tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+      tk.async = true;
+      tk.onload = tk.onreadystatechange = function () {
+        a = this.readyState;
+        if (f || (a && a != "complete" && a != "loaded")) return;
+        f = true;
+        clearTimeout(t);
+        try {
+          Typekit.load(config);
+        } catch (e) { }
+      };
+      s.parentNode.insertBefore(tk, s);
     })(document);
   </script>
 </head>
 
 <body>
+
   <header id="header">
-    <nav class="header-nav">
-      <div class="border">
-        <ul class="nav-section nav">
-          <a href="/about.html">
-            <li class="dotfont-color">わたし</li>
-          </a>
-          <a href="/works-top.html">
-            <li class="dotfont-color">しごと</li>
-          </a>
-          <a href="/contact.html">
-            <li class="dotfont-color">お問い合わせ</li>
-          </a>
-        </ul>
+    <div class="sns-nav">
+      <p>SNS</p>
+      <div class="sns-icon">
+        <a href="https://www.instagram.com/design_32__/" class="sns-insta"><img src="images/insta.png" alt="インスタ" />
+        </a>
+        <a href="https://twitter.com/design_32__" class="sns-x">
+          <img src="images/x.png" alt="x" />
+        </a>
       </div>
-    </nav>
+    </div>
   </header>
 
-  <section class="page-set">
-    <div class="thanks-box">
-      <p class="section-title dotfont-color">
-        お問い合わせありがとうございます！！
-      </p>
-      <p class="thanks-text">
-        こちらから3日以内に追って連絡させていただきますので、今しばらくお待ちください。 <br>
-        一緒に冒険できることを楽しみにしております！ <br>
-        ※3日経っても連絡がない場合は、大変申し訳ございませんが再度ご記入をお願いいたします。
-      </p>
+  <section id="thanks" class="page-set">
+    <div class="thanks-area">
+      <div class="thanks-box">
+        <p class="section-title dotfont-color">
+          お問い合わせありがとうございます！！
+        </p>
+        <p class="thanks-text">
+          こちらから3日以内に追って連絡させていただきますので、今しばらくお待ちください。
+          <br />
+          一緒に冒険できることを楽しみにしております！ <br />
+          ※3日経っても連絡がない場合は、大変申し訳ございませんが再度ご記入をお願いいたします。
+        </p>
+      </div>
+      <div>
+        <img src="images/kusabana.png" alt="草花" class="reef-photo" />
+        <img src="images/aruku.png" alt="歩く私" class="me-photo" />
+        <img src="images/aruku_sunny@2x.png" alt="歩くサニー" class="sunny-photo" />
+      </div>
     </div>
-    <div>
-      <img src="images/kusabana.png" alt="草花">
-      <img src="images/aruku.png" alt="歩く私">
-      <img src="images/aruku_sunny@2x.png" alt="歩くサニー">
+    <div class="back-btn">
+      <a href="index.html#header" class="dotfont"> トップへもどる</a>
     </div>
-    <a href="/index.html" class="back-btn dotfont">トップへもどる</a>
   </section>
 
-
+  <footer id="footer">
+    <div class="footer-container">
+      <div class="footer-area">
+        <div class="footer-logo">
+          <a href="index.html">
+            <p class="footer-logo-over dotfont dotfont-color">
+              YUKI <br />
+              OGAWA
+            </p>
+            <p class="footer-logo-under dotfont">
+              YUKI <br />
+              OGAWA
+            </p>
+          </a>
+        </div>
+        <nav>
+          <ul class="footer-nav nav">
+            <a href="about.html#about">
+              <li class="dotfont-color">わたし</li>
+            </a>
+            <a href="works-top.html#works">
+              <li class="dotfont-color">しごと</li>
+            </a>
+            <a href="contact.html#contact">
+              <li class="dotfont-color">お問い合わせ</li>
+            </a>
+          </ul>
+        </nav>
+      </div>
+      <div class="sns-btn">
+        <a href="https://www.instagram.com/design_32__/" class="insta-btn"><img src="images/insta_maru.png"
+            alt="インスタ" /></a>
+        <a href="https://twitter.com/design_32__"><img src="images/x_maru.png" alt="x" /></a>
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>
