@@ -48,17 +48,17 @@ body {
   z-index: 9999;
 }
 #header .border {
-  width: 280px;
+  width: 190px; /*280px */
 }
 .nav-area {
-  font-size: 31px;
+  font-size: 22px; /*31px */
   background-color: #fff;
   border: 2px solid #ba1e1e;
   border-radius: 7px;
-  padding: 39px 13px 34px 64px;
+  padding: 39px 5px 34px 41px; /*39px 13px 34px 64px */
 }
 .nav-area li {
-  padding-bottom: 15px;
+  padding-bottom: 18px; /*15px */
 }
 .nav-area li:last-child {
   padding-bottom: 0;
@@ -108,7 +108,7 @@ body {
 .top-container {
   text-align: center;
   margin-bottom: 219px;
-  height: 110vh;
+  height: 116vh;
   position: relative;
 }
 .reef-photo {
@@ -164,7 +164,7 @@ body {
 .logo-under {
   color: #ea80aa;
   line-height: 1.2;
-  padding-bottom: 19px;
+  padding-bottom: 11px;
   padding-top: 15px;
 }
 .logo-over {
@@ -279,7 +279,8 @@ body {
 .box-area p {
   width: 100%;
   background-color: #fff;
-  border: 1px solid #ba1e1e;
+  border: 2px solid #ba1e1e;
+  border-radius: 7px;
   font-size: 30px;
   line-height: 1.83;
   padding: 30px;
@@ -358,7 +359,8 @@ body {
 .border-box {
   background-color: #fff;
   border: 2px solid #ba1e1e;
-  padding: 7px 10px;
+  border-radius: 7px;
+  padding: 6px;
   position: absolute;
   right: 50%;
   bottom: 170px;
@@ -453,7 +455,7 @@ body {
 /* more btn */
 .btn-area {
   text-align: right;
-  padding-top: 9px;
+  padding-top: 42px;
 }
 .more-btn {
   color: #ba1e1e;
@@ -558,15 +560,16 @@ body {
   letter-spacing: -0.1px;
 }
 
-.profile-container {
-  padding-bottom: 150px;
+.border-line {
+  border: 2px dashed #ba1e1e;
+  margin: 150px 0 150px 0;
 }
 
 /* 心を動かされる */
 .about-box img {
   width: 444px;
 }
-.profile-text {
+.profile-text p {
   font-size: 16px;
   line-height: 1.81;
 }
@@ -587,11 +590,15 @@ body {
 }
 .about-box {
   display: flex;
-  justify-content: center;
-  gap: 103px;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* わざ */
+.sub-title {
+  font-size: 40px;
+  padding-bottom: 65px;
+}
 .skill-list li {
   font-size: 20px;
   line-height: 1.85;
@@ -686,61 +693,12 @@ body {
   background-color: #ba1e1e;
   color: #fff;
 }
-/* .pic-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 100vh;
-  box-sizing: border-box;
-  background-color: #fefefe;
-  gap: 1rem;
-}
-
-.pagination {
-  display: flex;
-  gap: 0.5rem;
-}
-
-.pagination a {
-  display: inline-block;
-  color: black;
-  border-radius: 50%;
-  border: 1px solid #dedede;
-  text-decoration: none;
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  text-align: center;
-}
-
-.pagination i {
-  line-height: 40px;
-}
-
-.pagination .active a {
-  background-color: #5cc6cd;
-  color: white;
-}
-
-.pagination a:hover {
-  background-color: #86c8cc;
-  color: white;
-}
-
-.pagination .disabled a {
-  pointer-events: none;
-  color: #ccc;
-}
-
-.pagination .disabled a:hover {
-  background-color: initial;
-  color: #ccc;
-} */
 
 /* ----しごと詳細---- */
+.works-container p {
+  font-size: 16px;
+}
 .works-tag {
-  font-size: 17px;
   padding-bottom: 12px;
 }
 .works-title {
@@ -748,12 +706,14 @@ body {
 }
 .works-box {
   display: flex;
-  /* align-items: flex-end; */
+  align-items: flex-end;
   gap: 56px;
   padding-bottom: 47px;
 }
+.works-box p {
+  padding-bottom: 3px;
+}
 .works-text {
-  font-size: 16px;
   line-height: 2;
 }
 .works-container {
@@ -773,6 +733,10 @@ body {
 }
 .works-img {
   padding-bottom: 62px;
+  text-align: center;
+}
+.works-img img {
+  width: 100%;
 }
 
 /* ----お問い合わせ---- */
@@ -789,7 +753,7 @@ body {
 .c-form__item {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  /* justify-content: space-evenly; */
   margin-bottom: 20px;
 }
 .c-form__label,
@@ -940,14 +904,14 @@ textarea.c-form__input {
 }
 
 /* テスト */
-.logo {
+.test {
   position: relative;
   display: flex;
   justify-content: center;
   text-align: center;
   padding-top: 110px;
 }
-.logo ::before {
+.test ::before {
   position: absolute;
   content: "YUKI";
   font-family: "AB-megadot9";
@@ -957,9 +921,106 @@ textarea.c-form__input {
   color: #ea80aa;
 }
 
+/* .header-nav-sp,
+.sp-menu-btn {
+  display: none;
+} */
+
 /* ----レスポンシブ---- */
-/* ----お問い合わせ---- */
-@media (min-width: 640px) {
+@media screen and (max-width: 767px) {
+  #header nav,
+  .sns-nav {
+    display: none;
+  }
+  .sp-menu-btn {
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    z-index: 9999;
+  }
+  .sp-menu-btn span {
+    /* 作った箱（↑の30*30の箱）の中でポジションを決める
+  図形を生成したときにセットで使う */
+    position: absolute;
+    content: "";
+    /* 図形を生成（今回はハンバーガーメニューの線） */
+    width: 30px;
+    height: 2px;
+    background-color: #fff;
+    top: 15px;
+    transition: 0.5s;
+  }
+  /* 擬似要素 */
+  /* 【::before】前とか上に要素を追加したい時に使う */
+  .sp-menu-btn span::before {
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 2px;
+    background-color: #fff;
+    top: -11px;
+    transition: 0.5s;
+  }
+  /* 【::after】後とか下に要素を追加したい時に使う */
+  .sp-menu-btn span::after {
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 2px;
+    background-color: #fff;
+    bottom: -11px;
+    transition: 0.5s;
+    /* 形を変化するまでにかかる時間を設定 */
+  }
+
+  /* font-size */
+  .lead h3 {
+    font-size: 60px;
+  }
+  .about-right h3 {
+    font-size: 39px;
+  }
+}
+
+/* hamメニューが開いた時 */
+.open span {
+  background-color: transparent;
+  /* 色を無効化 */
+}
+.open span::before {
+  transform: rotate(45deg);
+  /* transform : 形を変える / rotate : 回転 / deg : 度数 */
+  top: 0;
+}
+.open span::after {
+  transform: rotate(-45deg);
+  bottom: 0;
+}
+
+.header-nav-sp {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: #121212c1;
+  z-index: 9998;
+}
+.header-nav-sp ul {
+  height: 100%;
+  /* align-items,justify-contentを使って真ん中に持ってくるために
+  display: flexを使う！ */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.header-nav-sp li {
+  color: #fff;
+  /* ----お問い合わせ---- */
   .c-form__item {
     flex-wrap: nowrap;
   }
