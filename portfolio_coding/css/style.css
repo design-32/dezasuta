@@ -39,7 +39,7 @@ body {
 }
 
 /* ヘッダーnav */
-#header nav {
+.header-nav {
   display: flex;
   justify-content: flex-end;
   position: fixed;
@@ -50,17 +50,17 @@ body {
 #header .border {
   width: 190px; /*280px */
 }
-.nav-list {
+.header-nav ul {
   font-size: 22px; /*31px */
   background-color: #fff;
   border: 2px solid #ba1e1e;
   border-radius: 7px;
   padding: 39px 5px 34px 41px; /*39px 13px 34px 64px */
 }
-.nav-list li {
+.header-nav li {
   padding-bottom: 18px; /*15px */
 }
-.nav-list li:last-child {
+.header-nav li:last-child {
   padding-bottom: 0;
 }
 
@@ -108,7 +108,7 @@ body {
 .top-area {
   text-align: center;
   margin-bottom: 219px;
-  height: 116vh;
+  height: 100vh;
   position: relative;
 }
 .reef-photo {
@@ -160,7 +160,19 @@ body {
   display: flex;
   align-items: baseline;
   justify-content: center;
+  text-align: center;
+  position: relative;
+  content: "";
 }
+
+/* .top-area h1::before {
+  position: absolute;
+  content: "";
+  top: 100px;
+  left: 0px;
+  color: #ea80aa;
+} */
+
 .logo-under {
   color: #ea80aa;
   line-height: 1.2;
@@ -219,6 +231,7 @@ body {
   justify-content: flex-end;
   /* align-items: center; */
   gap: 49px;
+  padding-top: 58px;
 }
 
 /* more btn */
@@ -500,7 +513,7 @@ body {
   justify-content: center;
   gap: 8%;
   padding: 0 16px 75px;
-  padding-bottom: 75px;
+  /* padding-bottom: 75px; */
   align-items: center;
 }
 .profile-contents {
@@ -577,9 +590,6 @@ body {
 }
 
 /* 心を動かされる */
-.about-text {
-  padding-bottom: 58px;
-}
 .about-block {
   display: flex;
   justify-content: space-between;
@@ -587,6 +597,9 @@ body {
 }
 .about-block img {
   width: 444px;
+}
+.profile-text {
+  padding-top: 58px;
 }
 .profile-text p {
   font-size: 16px;
@@ -606,23 +619,87 @@ body {
 } */
 
 /* わざ */
+.skill-area {
+  max-width: 1000px;
+  width: 100%;
+}
+.skill-block {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+}
 .about-heading {
   font-size: 40px;
   padding-bottom: 65px;
 }
+.skill-list {
+  width: 50%;
+}
+.skill-list ul {
+  width: 100%;
+}
 .skill-list li {
+  display: flex;
+  gap: 10px;
   font-size: 20px;
   line-height: 1.85;
-}
-.skill-area {
-  display: flex;
-}
-.skill-gage {
   position: relative;
-  width: 240px;
+  align-items: center;
+}
+.skill-list li .skill-text {
+  width: 172px;
+}
+.skill-list li .bar {
+  width: calc(100% - 172px);
   height: 16px;
   background-color: #aeaeae;
   border-radius: 8px;
+  position: relative;
+  display: block;
+}
+.skill-list li .bar::after {
+  position: absolute;
+  content: "";
+  height: 16px;
+  background-color: #ba1e1e;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  z-index: 4;
+}
+.skill-list li.Illustrator .bar::after {
+  width: 100%;
+  border-radius: 8px;
+}
+.skill-list li.Photoshop .bar::after {
+  width: 80%;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+.skill-list li.HTML .bar::after {
+  width: 50%;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+.skill-list li.CSS .bar::after {
+  width: 50%;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+.skill-list li.JavaScript .bar::after {
+  width: 25%;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+.skill-list li.CapCut .bar::after {
+  width: 80%;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+.skill-list li.PremierePro .bar::after {
+  width: 25%;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
 }
 .skill-gage ::after {
   position: absolute;
@@ -748,6 +825,7 @@ body {
 }
 .works-img img {
   height: 650px;
+  /* object-fit: contain; */
 }
 
 .pc-scroll {
@@ -769,20 +847,22 @@ body {
 }
 .c-form__item {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   /* justify-content: space-evenly; */
   margin-bottom: 20px;
 }
-.c-form__label,
+.c-form__label {
+  padding: 10px 10px 10px 0;
+}
 .c-form__input {
   padding: 10px;
   font-size: 20px;
 }
 .c-form__label {
-  width: 90%;
+  width: 40%;
 }
 .c-form__input {
-  width: 90%;
+  width: 100%;
   font-size: 16px;
   border: solid 2px #ba1e1e;
   border-radius: 10px;
@@ -814,7 +894,7 @@ textarea.c-form__input {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 115px;
+  margin: 0 auto;
   transition: 0.4s;
 }
 .c-form__submit button:hover {
@@ -825,7 +905,7 @@ textarea.c-form__input {
 /* ----サンクスページ---- */
 .thanks-text {
   font-size: 16px;
-  line-height: 2.5;
+  line-height: 2.3;
 }
 .thanks-block {
   text-align: center;
@@ -850,7 +930,6 @@ textarea.c-form__input {
 }
 
 .thanks-area {
-  text-align: center;
   margin-bottom: 59px;
   height: 84vh;
   position: relative;
@@ -920,131 +999,380 @@ textarea.c-form__input {
   }
 }
 
-/* テスト */
-.test {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  padding-top: 110px;
-}
-.test ::before {
-  position: absolute;
-  content: "YUKI";
-  font-family: "AB-megadot9";
-  font-size: 70px;
-  top: 50px;
-  left: 50px;
-  color: #ea80aa;
-}
-
-/* .header-nav-sp,
-.sp-menu-btn {
+.sp-nav,
+.sp-menu-btn,
+.sp-br,
+.tab-br {
   display: none;
-} */
+}
 
 /* ----レスポンシブ---- */
-@media screen and (max-width: 767px) {
-  #header nav,
+@media screen and (max-width: 1050px) {
+  .header-nav,
   .sns-nav {
     display: none;
   }
+  .tab-br {
+    display: block;
+  }
+
   .sp-menu-btn {
     display: block;
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    top: 10px;
-    right: 10px;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    top: 15px;
+    right: 7%;
     cursor: pointer;
     z-index: 9999;
   }
   .sp-menu-btn span {
-    /* 作った箱（↑の30*30の箱）の中でポジションを決める
-  図形を生成したときにセットで使う */
     position: absolute;
     content: "";
-    /* 図形を生成（今回はハンバーガーメニューの線） */
-    width: 30px;
-    height: 2px;
-    background-color: #fff;
-    top: 15px;
+    width: 50px;
+    height: 4px;
+    background-color: #ba1e1e;
+    top: 25px;
     transition: 0.5s;
   }
-  /* 擬似要素 */
-  /* 【::before】前とか上に要素を追加したい時に使う */
   .sp-menu-btn span::before {
     position: absolute;
     content: "";
-    width: 30px;
-    height: 2px;
-    background-color: #fff;
-    top: -11px;
+    width: 50px;
+    height: 4px;
+    background-color: #ba1e1e;
+    top: -17px;
     transition: 0.5s;
   }
-  /* 【::after】後とか下に要素を追加したい時に使う */
   .sp-menu-btn span::after {
     position: absolute;
     content: "";
-    width: 30px;
-    height: 2px;
-    background-color: #fff;
-    bottom: -11px;
+    width: 50px;
+    height: 4px;
+    background-color: #ba1e1e;
+    bottom: -17px;
     transition: 0.5s;
-    /* 形を変化するまでにかかる時間を設定 */
   }
 
-  /* font-size */
-  .lead h3 {
-    font-size: 60px;
+  /* hamメニューが開いた時 */
+  .open span {
+    background-color: transparent;
   }
-  .about-right h3 {
-    font-size: 39px;
+  .open span::before {
+    transform: rotate(45deg);
+    top: 0;
+  }
+  .open span::after {
+    transform: rotate(-45deg);
+    bottom: 0;
+  }
+
+  .sp-nav {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: #fffffff9;
+    z-index: 9998;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+  }
+  .sp-nav ul {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    gap: 32px;
+    border: 2px solid #ba1e1e;
+    border-radius: 7px;
+    margin: 20px;
+  }
+  .sp-nav-border {
+    background-color: #fff;
+    border: 2px solid #ba1e1e;
+    /* padding: 6px; */
+    border-radius: 7px;
+  }
+
+  #about,
+  #works,
+  #footer,
+  #thanks,
+  #contact-form,
+  .works-wrapper {
+    width: 94%;
+    margin: 0 auto;
+  }
+
+  .footer-nav {
+    display: none;
+  }
+  .footer-area {
+    flex-direction: column;
+  }
+  .footer-block {
+    gap: 0;
+  }
+  .footer-logo {
+    padding-bottom: 20px;
+  }
+
+  /* ----わたしのこと---- */
+  .job-cat {
+    font-size: 18px;
+    line-height: 1.5;
+    padding-bottom: 13px;
+  }
+  .name-contents p {
+    font-size: 30px;
+  }
+  .name-ja {
+    font-size: 13px;
+  }
+  .name-contents {
+    padding-bottom: 5px;
+  }
+
+  .name-en {
+    font-size: 30px;
+    padding-bottom: 5px;
+  }
+
+  /* ----しごと---- */
+  .category-list {
+    gap: 12%;
+  }
+  .category-list li {
+    font-size: 18px;
+  }
+
+  /* ----サンクスページ---- */
+  #thanks .section-title {
+    font-size: 35px;
   }
 }
 
-/* hamメニューが開いた時 */
-.open span {
-  background-color: transparent;
-  /* 色を無効化 */
-}
-.open span::before {
-  transform: rotate(45deg);
-  /* transform : 形を変える / rotate : 回転 / deg : 度数 */
-  top: 0;
-}
-.open span::after {
-  transform: rotate(-45deg);
-  bottom: 0;
-}
+@media screen and (max-width: 767px) {
+  .sp-br {
+    display: block;
+  }
+  .pc-br {
+    display: none;
+  }
 
-.header-nav-sp {
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-  background-color: #121212c1;
-  z-index: 9998;
-}
-.header-nav-sp ul {
-  height: 100%;
-  /* align-items,justify-contentを使って真ん中に持ってくるために
-  display: flexを使う！ */
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  align-items: center;
-  justify-content: center;
-}
-.header-nav-sp li {
-  color: #fff;
+  /* ----共通---- */
+  .top-section-title {
+    font-size: 30px;
+    padding-bottom: 37px;
+  }
+  .section {
+    padding-bottom: 160px;
+  }
+  .section-title {
+    font-size: 30px;
+    padding-top: 159px;
+    padding-bottom: 43px;
+  }
+
+  /* ----MV---- */
+  .top-area h1 {
+    font-size: 69px;
+  }
+  .logo-under {
+    padding-top: 10px;
+  }
+  .job-cat-header {
+    font-size: 18px;
+  }
+  .copy {
+    font-size: 20px;
+    line-height: 1.45;
+  }
+
+  /* わたしのこと */
+  .about-area {
+    display: block;
+  }
+  .profile-img-top {
+    width: 75%;
+    margin: 0 auto;
+  }
+  .about-item {
+    padding-bottom: 0;
+    margin-left: -20px;
+    margin-bottom: -20px;
+    padding-top: 40px;
+  }
+  .about-lead {
+    padding-bottom: 30px;
+  }
+  .sns-btn2 {
+    display: none;
+  }
+  .btn-block2 {
+    margin: 0 auto;
+  }
+  .more-btn {
+    font-size: 25px;
+    padding: 8px 29px;
+    border-left: 3px solid #ba1e1e;
+    border-bottom: 3px solid #ba1e1e;
+  }
+  .more-btn::before {
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    border-bottom: 13px solid #ba1e1e;
+    right: -5px;
+    bottom: -9px;
+  }
+  .more-btn::after {
+    bottom: -8px;
+    right: -6px;
+  }
+  .btn-area {
+    padding-top: 27px;
+  }
+
+  /* しごと */
+  .job-img01,
+  .job-img02,
+  .job-img03 {
+    display: none;
+  }
+  .job-img {
+    flex-direction: column;
+    row-gap: 23px;
+  }
+  .job-img a {
+    width: 100%;
+  }
+  .btn-block {
+    text-align: center;
+  }
+
+  /* お問い合わせ */
+  .contact-contents {
+    flex-direction: column;
+  }
+
+  /* ----わたし---- */
+  .profile-block {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0 16px 59px;
+  }
+  .name-contents .sns-btn {
+    display: none;
+  }
+  .profile-img2 {
+    width: 100%;
+    padding-bottom: 27px;
+  }
+  .box-text {
+    font-size: 16px;
+    line-height: 2.69;
+  }
+  .box-block {
+    padding: 26px 17px;
+  }
+  .box-margin {
+    margin-bottom: 126px;
+  }
+
+  .border-line {
+    margin: 100px 0 100px 0;
+  }
+
+  .about-block .about-item {
+    padding-top: 0;
+  }
+  .about-block {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .game-img {
+    text-align: end;
+    padding-top: 18px;
+  }
+
+  .skill-block {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .love-list li {
+    font-size: 18px;
+    line-height: 2.33;
+  }
+
+  /* ----しごと---- */
+  /* .category-list {
+    display: block;
+    column-count: 2;
+  }
+  .category-list li {
+    padding-bottom: 34px;
+  }
+  .category-list li:last-child {
+    padding-bottom: 0;
+  } */
+  .works-img-area {
+    flex-direction: column;
+  }
+  .works-img-area a {
+    width: 100%;
+    padding-bottom: 83px;
+  }
+
+  /* ----しごと詳細---- */
+  .works-title {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding-bottom: 25px;
+  }
+  .works-title p {
+    text-align: end;
+  }
+  .works-title h3 {
+    padding-bottom: 14px;
+  }
+
   /* ----お問い合わせ---- */
+  .contact-text {
+    padding-bottom: 56px;
+  }
+
   .c-form__item {
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
   }
   .c-form__label {
-    width: 40%;
+    width: 90%;
   }
-  .c-form__input {
-    width: 55%;
+
+  .c-form__submit button {
+    font-size: 16px;
+    width: 100%;
+    height: 53px;
+  }
+  .c-form__submit {
+    margin-top: 53px;
+  }
+
+  /* ----サンクスページ---- */
+  .thanks-block {
+    text-align: start;
+  }
+  #thanks .section-title {
+    font-size: 30px;
+    line-height: 1.67;
+  }
+  .back-btn a {
+    font-size: 16px;
+    width: 100%;
+    height: 53px;
   }
 }

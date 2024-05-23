@@ -39,13 +39,14 @@
       s.parentNode.insertBefore(tk, s);
     })(document);
   </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
 <body>
   <header id="header">
-    <nav>
+    <nav class="header-nav">
       <div class="border">
-        <ul class="nav-list nav">
+        <ul class="nav">
           <li class="dotfont-color">
             <a href="about.html#about">わたし</a>
           </li>
@@ -61,6 +62,32 @@
         </ul>
       </div>
     </nav>
+    <div class="sp-menu-btn"><span></span></div>
+    <div class="sp-nav-border">
+      <nav class="sp-nav">
+        <ul class="nav">
+          <li class="dotfont-color">
+            <a href="about.html#about">わたし</a>
+          </li>
+          <li class="dotfont-color">
+            <a href="works-top.html#works">しごと</a>
+          </li>
+          <li class="dotfont-color">
+            <a href="contact.html#contact">お問い合わせ</a>
+          </li>
+          <li class="dotfont-color">
+            <a href="index.html#header">トップへ戻る</a>
+          </li>
+        </ul>
+        <div class="sp-sns-icon">
+          <a href="https://www.instagram.com/design_32__/" class="sns-insta"><img src="images/insta_red.png"
+              alt="インスタ" />
+          </a>
+          <a href="https://twitter.com/design_32__" class="sns-x"><img src="images/x_red.png" alt="x" />
+          </a>
+        </div>
+      </nav>
+    </div>
     <div class="sns-nav">
       <p>SNS</p>
       <div class="sns-icon">
@@ -88,11 +115,13 @@
       Web designer <br />
       Engineer
     </p>
-    <h3 class="copy dotfont-color">新しい ぼうけんに 出かけよう。</h3>
-    <div>
+    <h3 class="copy dotfont-color">新しい ぼうけんに <br class="sp-br"> 出かけよう。</h3>
+    <picture>
+      <source srcset="images/kusa-sp.png" media="(max-width:767px)" class="reef-photo">
       <img src="images/kusa.png" alt="草" class="reef-photo" />
-      <img src="images/aruku.png" alt="歩く私" class="me-photo" />
-      <img src="images/aruku_sunny@2x.png" alt="歩くサニー" class="sunny-photo" />
+    </picture>
+    <img src="images/aruku.png" alt="歩く私" class="me-photo" />
+    <img src="images/aruku_sunny@2x.png" alt="歩くサニー" class="sunny-photo" />
     </div>
   </section>
 
@@ -105,7 +134,7 @@
       <div>
         <p class="about-item">“</p>
         <p class="about-lead dotfont">
-          心を動かされる「しゅんかん」が <br />
+          心を動かされる <br class="sp-br">「しゅんかん」が <br />
           たくさんあった。 <br />
           今度は私がつくりたい。
         </p>
@@ -113,20 +142,20 @@
           ワクワクに正直で、 <br />
           人よりほんの少しゲームが好きで、 <br />
           漫画が人生の教科書。 <br />
-          好きにとことん一直線、そんな人間です。
+          好きにとことん一直線、 <br class="sp-br">そんな人間です。
         </p>
-        <div class="btn-area">
-          <div class="sns-btn2">
-            <a href="https://www.instagram.com/design_32__/" class="insta-btn"><img src="images/insta_maru.png"
-                alt="インスタ" /></a>
-            <a href="https://twitter.com/design_32__"><img src="images/x_maru.png" alt="x" /></a>
-          </div>
-          <div class="btn-block2">
-            <a href="./works-top.html" class="more-btn dotfont-color">
-              もっと見る
-            </a>
-          </div>
-        </div>
+      </div>
+    </div>
+    <div class="btn-area">
+      <div class="sns-btn2">
+        <a href="https://www.instagram.com/design_32__/" class="insta-btn"><img src="images/insta_maru.png"
+            alt="インスタ" /></a>
+        <a href="https://twitter.com/design_32__"><img src="images/x_maru.png" alt="x" /></a>
+      </div>
+      <div class="btn-block2">
+        <a href="./works-top.html" class="more-btn dotfont-color">
+          もっと見る
+        </a>
       </div>
     </div>
   </section>
@@ -134,27 +163,27 @@
   <section id="works" class="page-set section">
     <h2 class="top-section-title dotfont-color">▶︎ しごと</h2>
     <div class="job-img">
-      <a href="" class="job-img01">
+      <a href="works6.html#works6" class="job-img06">
         <img src="images/kadai6_boke.jpg" alt="課題6" class="job-work-img01" />
         <img src="images/kadai6.jpg" alt="課題6" class="job-work-img01-hover" />
       </a>
-      <a href="" class="job-img02">
+      <a href="works5.html#works5" class="job-img05">
         <img src="images/kadai5_boke.jpg" alt="課題5" class="job-work-img02" />
         <img src="images/kadai5.jpg" alt="課題5" class="job-work-img02-hover" />
       </a>
-      <a href="" class="job-img03">
+      <a href="works4.html#works4" class="job-img04">
         <img src="images/kadai4_boke.jpg" alt="課題4" class="job-work-img03" />
         <img src="images/kadai4.jpg" alt="課題4" class="job-work-img03-hover" />
       </a>
-      <a href="" class="job-img04">
+      <a href="works3.html#works3" class="job-img03">
         <img src="images/kadai3_boke.jpg" alt="課題3" class="job-work-img04" />
         <img src="images/kadai3.jpg" alt="課題3" class="job-work-img04-hover" />
       </a>
-      <a href="" class="job-img05">
+      <a href="works2.html#works2" class="job-img02">
         <img src="images/kadai2_boke.jpg" alt="課題2" class="job-work-img05" />
         <img src="images/kadai2.jpg" alt="課題2" class="job-work-img05-hover" />
       </a>
-      <a href="" class="job-img06">
+      <a href="works1.html#works1" class="job-img01">
         <img src="images/kadai1_boke.jpg" alt="課題1" class="job-work-img06" />
         <img src="images/kadai1.jpg" alt="課題1" class="job-work-img06-hover" />
       </a>
@@ -240,6 +269,16 @@
       </div>
     </div>
   </footer>
+
+  <!-- ハンバーガーメニュー -->
+  <script>
+    $(function () {
+      $(".sp-menu-btn").on("click", function () {
+        $(".sp-menu-btn").toggleClass("open");
+        $(".sp-nav").fadeToggle();
+      });
+    });
+  </script>
 </body>
 
 </html>
