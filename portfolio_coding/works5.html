@@ -18,13 +18,15 @@
         h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
     })(document);
   </script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
 <body>
   <header id="header">
-    <nav>
+    <nav class="header-nav">
       <div class="border">
-        <ul class="nav-list nav">
+        <ul class="nav">
           <li class="dotfont-color">
             <a href="about.html#about">わたし</a>
           </li>
@@ -40,6 +42,34 @@
         </ul>
       </div>
     </nav>
+
+    <div class="sp-menu-btn"><span></span></div>
+    <div class="sp-nav-border">
+      <nav class="sp-nav">
+        <ul class="nav">
+          <li class="dotfont-color">
+            <a href="about.html#about">わたし</a>
+          </li>
+          <li class="dotfont-color">
+            <a href="works-top.html#works">しごと</a>
+          </li>
+          <li class="dotfont-color">
+            <a href="contact.html#contact">お問い合わせ</a>
+          </li>
+          <li class="dotfont-color">
+            <a href="index.html#header">トップへ戻る</a>
+          </li>
+        </ul>
+        <div class="sp-sns-icon">
+          <a href="https://www.instagram.com/design_32__/" class="sns-insta"><img src="images/insta_red.png"
+              alt="インスタ" />
+          </a>
+          <a href="https://twitter.com/design_32__" class="sns-x"><img src="images/x_red.png" alt="x" />
+          </a>
+        </div>
+      </nav>
+    </div>
+
     <div class="sns-nav">
       <p>SNS</p>
       <div class="sns-icon">
@@ -165,6 +195,16 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    // ハンバーガーメニュー
+    $(function () {
+      $(".sp-menu-btn").on("click", function () {
+        $(".sp-menu-btn").toggleClass("open");
+        $(".sp-nav, .sp-nav-border").fadeToggle();
+      });
+    });
+  </script>
 </body>
 
 </html>

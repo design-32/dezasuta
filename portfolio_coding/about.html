@@ -39,13 +39,15 @@
       s.parentNode.insertBefore(tk, s);
     })(document);
   </script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
 <body>
   <header id="header">
-    <nav>
+    <nav class="header-nav">
       <div class="border">
-        <ul class="nav-list nav">
+        <ul class="nav">
           <li class="dotfont-color">
             <a href="about.html#about">わたし</a>
           </li>
@@ -61,6 +63,34 @@
         </ul>
       </div>
     </nav>
+
+    <div class="sp-menu-btn"><span></span></div>
+    <div class="sp-nav-border">
+      <nav class="sp-nav">
+        <ul class="nav">
+          <li class="dotfont-color">
+            <a href="about.html#about">わたし</a>
+          </li>
+          <li class="dotfont-color">
+            <a href="works-top.html#works">しごと</a>
+          </li>
+          <li class="dotfont-color">
+            <a href="contact.html#contact">お問い合わせ</a>
+          </li>
+          <li class="dotfont-color">
+            <a href="index.html#header">トップへ戻る</a>
+          </li>
+        </ul>
+        <div class="sp-sns-icon">
+          <a href="https://www.instagram.com/design_32__/" class="sns-insta"><img src="images/insta_red.png"
+              alt="インスタ" />
+          </a>
+          <a href="https://twitter.com/design_32__" class="sns-x"><img src="images/x_red.png" alt="x" />
+          </a>
+        </div>
+      </nav>
+    </div>
+
     <div class="sns-nav">
       <p>SNS</p>
       <div class="sns-icon">
@@ -100,27 +130,32 @@
             <div class="profile-list">
               <ul>
                 <li class="dotfont">Lv.29</li>
-                <li class="dotfont-color">生年月日 :</li>
-                <li class="dotfont-color">タイプ :</li>
-                <li class="dotfont-color">せいそく :</li>
+                <li class="dotfont-color">
+                  <span class="list-title">生年月日 :</span>
+                  <span class="list-item">1994.6.1</span>
+                </li>
+                <li class="dotfont-color">
+                  <span class="list-title">タイプ :</span>
+                  <span class="list-item">O型</span>
+                </li>
+                <li class="dotfont-color">
+                  <span class="list-title">せいそく :</span>
+                  <span class="list-item">ほっかいどう</span>
+                </li>
               </ul>
               <ul>
-                <li class="dotfont-color">せいかく :</li>
-                <li class="dotfont-color">とくぎ :</li>
-                <li class="dotfont-color">ざゆうの銘 :</li>
-              </ul>
-            </div>
-            <div class="profile-list">
-              <ul>
-                <li class="dotfont">1994.6.1</li>
-                <li class="dotfont">O型</li>
-                <li class="dotfont">ほっかいどう</li>
-              </ul>
-              <ul>
-                <li class="dotfont">あまのじゃく</li>
-                <li class="dotfont">ねむる</li>
-                <li class="dotfont dotfont-last">
-                  「“ムリ“ではなく“ <br class="tab-br">ムズカシイ“である！！」
+                <li class="dotfont-color">
+                  <span class="list-title">せいかく :</span>
+                  <span class="list-item">あまのじゃく</span>
+                </li>
+                <li class="dotfont-color">
+                  <span class="list-title">とくぎ :</span>
+                  <span class="list-item">ねむる</span>
+                </li>
+                <li class="dotfont-color">
+                  <span class="list-title">ざゆうの銘 :</span>
+                  <span class="list-item list-item--last">「“ムリ“ではなく“
+                    <br class="tab-br" />ムズカシイ“である！！」</span>
                 </li>
               </ul>
             </div>
@@ -155,32 +190,29 @@
           <div class="profile-contents">
             <div class="profile-list">
               <ul>
-                <li class="dotfont">Lv.5</li>
-                <li class="dotfont-color">生年月日:</li>
-                <li class="dotfont-color">しゅるい:</li>
-                <li class="dotfont-color">せいそく:</li>
-              </ul>
-              <ul>
-                <li class="dotfont-color">せいかく:</li>
-                <li class="dotfont-color">とくぎ:</li>
-                <li class="dotfont-color">一言:</li>
-              </ul>
-            </div>
-            <div class="profile-list">
-              <ul>
-                <li class="dotfont">2018.12.24</li>
-                <li class="dotfont">
-                  ラブラドール・ボーダーコリーのミックス
+                <li class="dotfont-color">
+                  <span class="list-title">生年月日:</span>
+                  <span class="list-item">2018.12.24</span>
                 </li>
-                <li class="dotfont">ほっかいどう</li>
-              </ul>
-              <ul>
-                <li class="dotfont">
-                  こうきしんおうせい　だけど　おくびょう
+                <li class="dotfont-color">
+                  <span class="list-title">しゅるい:</span>
+                  <span class="list-item">ラブラドール・ボーダーコリーのミックス</span>
                 </li>
-                <li class="dotfont">どろぼう</li>
-                <li class="dotfont">
-                  「もっとうまくフリスビーを投げてほしい。」
+                <li class="dotfont-color">
+                  <span class="list-title">せいそく:</span>
+                  <span class="list-item">ほっかいどう</span>
+                </li>
+                <li class="dotfont-color">
+                  <span class="list-title">せいかく:</span>
+                  <span class="list-item">こうきしんおうせい　だけど　おくびょう</span>
+                </li>
+                <li class="dotfont-color">
+                  <span class="list-title">とくぎ:</span>
+                  <span class="list-item">どろぼう</span>
+                </li>
+                <li class="dotfont-color">
+                  <span class="list-title">一言:</span>
+                  <span class="list-item list-item--last">「もっとうまくフリスビーを投げてほしい。」</span>
                 </li>
               </ul>
             </div>
@@ -209,15 +241,15 @@
         <div>
           <p class="about-item">“</p>
           <p class="about-lead dotfont">
-            心を動かされる <br class="sp-br">「しゅんかん」が <br>
-            たくさんあった。 <br>
+            心を動かされる <br class="sp-br" />「しゅんかん」が <br />
+            たくさんあった。 <br />
             今度は私がつくりたい。
           </p>
           <p class="about-text">
-            ワクワクに正直で、 <br>
-            人よりほんの少しゲームが好きで、 <br>
-            漫画が人生の教科書。 <br>
-            好きにとことん一直線、 <br class="sp-br">そんな人間です。
+            ワクワクに正直で、 <br />
+            人よりほんの少しゲームが好きで、 <br />
+            漫画が人生の教科書。 <br />
+            好きにとことん一直線、 <br class="sp-br" />そんな人間です。
           </p>
         </div>
         <div class="game-img">
@@ -226,31 +258,29 @@
       </div>
       <div class="profile-text">
         <p class="profile-text-padding">
-          埼玉県出身、北海道興部町（おこっぺ）育ち・在住。 <br>
+          埼玉県出身、北海道興部町（おこっぺ）育ち・在住。 <br />
           見渡す限り牛！牛！牛！の人口より牛の数の方が多い町で、大きな黒犬の「サニー」と暮らしています。
-          <br>
+          <br />
           サニーとの散歩から始まり、サニーと眠るのが毎日のルーティーン。
         </p>
         <p class="profile-text-padding">
-          私の冒険の始まりは、小学2年生のクリスマス前。 <br>
-          “今年こそゲームが欲しい娘” <br>
-          vs <br>
-          “絶対にゲームを買いたくない母” <br>
-          よくある構図。 <br>
+          私の冒険の始まりは、小学2年生のクリスマス前。 <br />
+          “今年こそゲームが欲しい娘” <br />
+          vs <br />
+          “絶対にゲームを買いたくない母” <br />
+          よくある構図。 <br />
           その一歩も譲らない攻防を見て、母に内緒で祖父が買ってくれた。 <br />
           （もちろん祖父は母に怒られた）
         </p>
         <p class="profile-text-padding2">
-          「ゲームは一日15分！」（30分だったかも） <br>
-          そんな一瞬で過ぎてしまうような母との約束があっても、 <br>
+          「ゲームは一日15分！」（30分だったかも） <br />
+          そんな一瞬で過ぎてしまうような母との約束があっても、 <br />
           40.8×61.2mmの小さな画面の中の冒険に、毎日ワクワクした。
         </p>
         <p class="bold-font">
           “そんな心の動く瞬間を、ほんの少しでもいいからつくりたい。”
         </p>
-        <p>
-          そんな思いを持って、今日もデザインをしています。
-        </p>
+        <p>そんな思いを持って、今日もデザインをしています。</p>
       </div>
     </section>
 
@@ -403,6 +433,39 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    // ハンバーガーメニュー
+    $(function () {
+      $(".sp-menu-btn").on("click", function () {
+        $(".sp-menu-btn").toggleClass("open");
+        $(".sp-nav, .sp-nav-border").fadeToggle();
+      });
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const skillArea = document.querySelector(".skill-area");
+      const bars = document.querySelectorAll(".skill-list li .bar");
+
+      const observer = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              bars.forEach((bar) => {
+                bar.classList.add("animate");
+              });
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        {
+          threshold: 0.1,
+        }
+      );
+
+      observer.observe(skillArea);
+    });
+  </script>
 </body>
 
 </html>

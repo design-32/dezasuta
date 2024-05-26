@@ -18,13 +18,15 @@
         h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
     })(document);
   </script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
 <body>
   <header id="header">
-    <nav>
+    <nav class="header-nav">
       <div class="border">
-        <ul class="nav-list nav">
+        <ul class="nav">
           <li class="dotfont-color">
             <a href="about.html#about">わたし</a>
           </li>
@@ -40,6 +42,34 @@
         </ul>
       </div>
     </nav>
+
+    <div class="sp-menu-btn"><span></span></div>
+    <div class="sp-nav-border">
+      <nav class="sp-nav">
+        <ul class="nav">
+          <li class="dotfont-color">
+            <a href="about.html#about">わたし</a>
+          </li>
+          <li class="dotfont-color">
+            <a href="works-top.html#works">しごと</a>
+          </li>
+          <li class="dotfont-color">
+            <a href="contact.html#contact">お問い合わせ</a>
+          </li>
+          <li class="dotfont-color">
+            <a href="index.html#header">トップへ戻る</a>
+          </li>
+        </ul>
+        <div class="sp-sns-icon">
+          <a href="https://www.instagram.com/design_32__/" class="sns-insta"><img src="images/insta_red.png"
+              alt="インスタ" />
+          </a>
+          <a href="https://twitter.com/design_32__" class="sns-x"><img src="images/x_red.png" alt="x" />
+          </a>
+        </div>
+      </nav>
+    </div>
+
     <div class="sns-nav">
       <p>SNS</p>
       <div class="sns-icon">
@@ -60,22 +90,22 @@
       <p class="dotfont-color">カテゴリー</p>
       <div class="border">
         <ul class="category-list">
-          <li class="dotfont">すべて</li>
-          <li class="dotfont">ウェブサイト</li>
-          <li class="dotfont">バナー</li>
-          <li class="dotfont">コーディング</li>
+          <li class="tab active dotfont">すべて</li>
+          <li class="tab dotfont">ウェブサイト</li>
+          <li class="tab dotfont">バナー</li>
+          <li class="tab dotfont">コーディング</li>
         </ul>
       </div>
     </div>
 
     <!-- 実績写真 -->
     <div class="works-img-area">
-      <a href="works6.html#works6"><img src="images/kadai6.jpg" alt="課題6"></a>
-      <a href="works5.html#works5"><img src="images/kadai5.jpg" alt="課題5"></a>
-      <a href="works4.html#works4"><img src="images/kadai4.jpg" alt="課題4"></a>
-      <a href="works3.html#works3"><img src="images/kadai3.jpg" alt="課題3"></a>
-      <a href="works2.html#works2"><img src="images/kadai2.jpg" alt="課題2"></a>
-      <a href="works1.html#works1"><img src="images/kadai1.jpg" alt="課題1"></a>
+      <a href="works6.html#works6"><img src="images/kadai6.jpg" alt="課題6" class="panel active"></a>
+      <a href="works5.html#works5"><img src="images/kadai5.jpg" alt="課題5" class="panel active"></a>
+      <a href="works4.html#works4"><img src="images/kadai4.jpg" alt="課題4" class="panel active"></a>
+      <a href="works3.html#works3"><img src="images/kadai3.jpg" alt="課題3" class="panel active"></a>
+      <a href="works2.html#works2"><img src="images/kadai2.jpg" alt="課題2" class="panel active"></a>
+      <a href="works1.html#works1"><img src="images/kadai1.jpg" alt="課題1" class="panel active"></a>
     </div>
 
     <ul class="pagination">
@@ -165,6 +195,25 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    // ハンバーガーメニュー
+    $(function () {
+      $(".sp-menu-btn").on("click", function () {
+        $(".sp-menu-btn").toggleClass("open");
+        $(".sp-nav, .sp-nav-border").fadeToggle();
+      });
+    });
+
+    // $(function () {
+    //   $('.tab').on('click', function () {
+    //     $('.tab, .panel').removeClass('active');
+    //     $(this).addClass('active');
+    //     var index = $('.tab').index(this);
+    //     $('.panel').eq(index).addClass('active');
+    //   });
+    // });
+  </script>
 </body>
 
 </html>
