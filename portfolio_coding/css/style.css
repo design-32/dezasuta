@@ -104,7 +104,7 @@ body {
   transform: translateX(-50%);
 }
 
-/* メインビジュアル */
+/* MV */
 .top-area {
   text-align: center;
   margin-bottom: 219px;
@@ -1193,7 +1193,7 @@ textarea.c-form__input {
 
   .question-box {
     max-width: 115px;
-    margin: 139px auto 100px auto;
+    margin: 139px auto 30px auto;
   }
   .question-line {
     height: 32px;
