@@ -40,9 +40,24 @@
     })(document);
   </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
 </head>
 
 <body>
+  <section id="load">
+    <p>ロード中...</p>
+    <div class="prog-bar">
+      <p class="bar"></p>
+    </div>
+  </section>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      setTimeout(function () {
+        document.getElementById("load").style.display = "none";
+      }, 3500); // 3秒後に非表示にする
+    });
+  </script>
+
   <header id="header">
     <nav class="header-nav">
       <div class="border">
@@ -213,7 +228,7 @@
         <span class="question-line question-line08"></span>
         <span class="question-line question-line09"></span>
       </div>
-      <div class="border-box fadeLeftTrigger">
+      <div data-aos="fade-right" class="border-box">
         <p class="dotfont-color">
           あ！　まだ見ぬ<br />
           ぼうけんが　とびだしてきた！
@@ -229,7 +244,7 @@
         お問合わせお待ちしております。<br class="pc-br">
       </p>
       <div class="contact-box border">
-        <div class="contact-btn">
+        <div class="contact-btn nav">
           <a href="./contact.html" class="yes-btn dotfont-color"> する </a>
           <a href="./contact.html" class="little-btn"> ちょっとしてみる </a>
         </div>
@@ -283,6 +298,8 @@
       });
     });
 
+
+    AOS.init();
 
     // ふわっ
     $(window).scroll(function () {

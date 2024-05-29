@@ -89,7 +89,7 @@
     <div class="category-area">
       <p class="dotfont-color">カテゴリー</p>
       <div class="border">
-        <ul class="category-list">
+        <ul class="category-list nav">
           <li class="tab active dotfont">すべて</li>
           <li class="tab dotfont">ウェブサイト</li>
           <li class="tab dotfont">バナー</li>
@@ -99,16 +99,30 @@
     </div>
 
     <!-- 実績写真 -->
-    <div class="works-img-area">
-      <a href="works6.html#works6"><img src="images/kadai6.jpg" alt="課題6" class="panel active"></a>
-      <a href="works5.html#works5"><img src="images/kadai5.jpg" alt="課題5" class="panel active"></a>
-      <a href="works4.html#works4"><img src="images/kadai4.jpg" alt="課題4" class="panel active"></a>
-      <a href="works3.html#works3"><img src="images/kadai3.jpg" alt="課題3" class="panel active"></a>
-      <a href="works2.html#works2"><img src="images/kadai2.jpg" alt="課題2" class="panel active"></a>
-      <a href="works1.html#works1"><img src="images/kadai1.jpg" alt="課題1" class="panel active"></a>
+    <div class="works-img-area panel active">
+      <a href="works6.html#works6"><img src="images/kadai6.jpg" alt="課題6" class="works-area-img"></a>
+      <a href="works5.html#works5"><img src="images/kadai5.jpg" alt="課題5" class="works-area-img"></a>
+      <a href="works4.html#works4"><img src="images/kadai4.jpg" alt="課題4" class="works-area-img"></a>
+      <a href="works3.html#works3"><img src="images/kadai3.jpg" alt="課題3" class="works-area-img"></a>
+      <a href="works2.html#works2"><img src="images/kadai2.jpg" alt="課題2" class="works-area-img"></a>
+      <a href="works1.html#works1"><img src="images/kadai1.jpg" alt="課題1" class="works-area-img"></a>
+    </div>
+    <div class="works-img-area panel">
+      <a href="works5.html#works5"><img src="images/kadai5.jpg" alt="課題5" class="works-area-img"></a>
+      <a href="works4.html#works4"><img src="images/kadai4.jpg" alt="課題4" class="works-area-img"></a>
+
+    </div>
+    <div class="works-img-area panel">
+      <a href="works2.html#works2"><img src="images/kadai2.jpg" alt="課題2" class="works-area-img"></a>
+      <a href="works1.html#works1"><img src="images/kadai1.jpg" alt="課題1" class="works-area-img"></a>
     </div>
 
-    <ul class="pagination">
+    <div class="works-img-area panel">
+      <a href="works6.html#works6"><img src="images/kadai6.jpg" alt="課題6" class="works-area-img"></a>
+
+    </div>
+
+    <ul class=" pagination">
       <a href="">
         <li class="btn-text dotfont">&lt;</li>
       </a>
@@ -205,14 +219,17 @@
       });
     });
 
-    // $(function () {
-    //   $('.tab').on('click', function () {
-    //     $('.tab, .panel').removeClass('active');
-    //     $(this).addClass('active');
-    //     var index = $('.tab').index(this);
-    //     $('.panel').eq(index).addClass('active');
-    //   });
-    // });
+    // タブ切り替え
+    $(function () {
+      $('.tab').on('click', function () {
+        $('.tab, .panel').removeClass('active');
+
+        $(this).addClass('active');
+
+        var index = $('.tab').index(this);
+        $('.panel').eq(index).addClass('active');
+      });
+    });
   </script>
 </body>
 

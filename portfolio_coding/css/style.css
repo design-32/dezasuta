@@ -45,7 +45,7 @@ body {
   position: fixed;
   right: 5%;
   top: 3%;
-  z-index: 9999;
+  z-index: 9998;
 }
 #header .border {
   width: 190px; /*280px */
@@ -64,12 +64,28 @@ body {
   padding-bottom: 0;
 }
 
+/* 三角 */
+.nav a {
+  text-decoration: none;
+}
+.nav a:hover:before {
+  border-top: solid 10px transparent;
+  border-bottom: solid 10px transparent;
+  border-left: solid 17px #ba1e1e;
+  border-right: 0;
+  width: 0;
+  height: 0;
+  content: "";
+  position: absolute;
+  left: 20px;
+}
+
 .sns-nav {
   position: fixed;
   width: 2%;
   right: 1.3%;
   top: 250px;
-  z-index: 9999;
+  z-index: 9998;
 }
 .sns-nav::after {
   position: absolute;
@@ -182,7 +198,7 @@ body {
 .logo-over {
   line-height: 1.2;
   position: absolute;
-  z-index: 9997;
+  /* z-index: 9996; */
 }
 
 .job-cat-header {
@@ -464,28 +480,6 @@ body {
   padding-top: 70px;
 }
 
-.fadeLeft {
-  animation-name: fadeLeftAnime;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
-  opacity: 0;
-  animation-delay: 0.6s;
-}
-@keyframes fadeLeftAnime {
-  from {
-    opacity: 0;
-    transform: translateX(-100px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-.fadeLeftTrigger {
-  opacity: 0;
-}
-
 /* フッター */
 .footer-nav {
   display: flex;
@@ -552,6 +546,22 @@ body {
 }
 .profile-img2 {
   width: calc(100% - 462px);
+}
+
+.profile-img2 {
+  position: relative;
+}
+.profile-img2:hover img:first-of-type {
+  opacity: 0;
+}
+.profile-img2 img:last-of-type {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  opacity: 0;
+}
+.profile-img2:hover img:last-of-type {
+  opacity: 1;
 }
 
 .job-cat {
@@ -763,7 +773,7 @@ body {
 }
 /* .tab {
   width: calc(100% / 4);
-}
+} */
 .tab .active {
   background-color: #000;
   color: #fff;
@@ -772,8 +782,10 @@ body {
   display: none;
 }
 .panel .active {
-  display: block;
-} */
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
 .category-area p {
   font-size: 30px;
   position: absolute;
@@ -795,11 +807,11 @@ body {
   top: 0;
   z-index: 3;
 }
-.works-img-area {
+/* .works-img-area {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-}
+} */
 .works-img-area a {
   width: 47%;
   padding-bottom: 59px;
@@ -823,6 +835,24 @@ body {
   background-color: #ba1e1e;
   color: #fff;
 }
+.works-area-img:hover {
+  opacity: 1;
+}
+
+/* .category-list li {
+  text-decoration: none;
+}
+.category-list li:hover:before {
+  border-top: solid 10px transparent;
+  border-bottom: solid 10px transparent;
+  border-left: solid 17px #ba1e1e;
+  border-right: 0;
+  width: 0;
+  height: 0;
+  content: "";
+  position: absolute;
+  left: 20px;
+} */
 
 /* ----しごと詳細---- */
 .works-area p {
@@ -865,15 +895,39 @@ body {
   align-items: center;
   gap: 50px;
 }
-.works-img img {
+.high-img {
   height: 650px;
   /* object-fit: contain; */
 }
-
+.row-img {
+  height: auto;
+}
 .pc-scroll {
   height: 650px;
   overflow-y: scroll;
   margin-bottom: 62px;
+}
+
+.link-text {
+  font-size: 15px;
+}
+.link-text a {
+  transition: color 0.3s;
+}
+.link-text a:hover {
+  color: #494949;
+}
+.link-url {
+  text-decoration: underline;
+  text-underline-offset: 8px;
+  text-decoration: underline 1px;
+  background-image: url(/images/link.png); /*背景画像のパス*/
+  background-repeat: no-repeat; /*背景画像の繰り返し*/
+  background-position: center right; /*背景画像の配置*/
+  padding-right: 30px; /*背景画像を入れる余白をつくる*/
+}
+#works6 .works-text {
+  padding-bottom: 25px;
 }
 
 /* ----お問い合わせ---- */
@@ -938,6 +992,7 @@ textarea.c-form__input {
   justify-content: center;
   margin: 0 auto;
   transition: 0.4s;
+  border-style: none;
 }
 .c-form__submit button:hover {
   color: #fff;
@@ -1003,18 +1058,27 @@ textarea.c-form__input {
 
 /* ローディング */
 #load {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: fixed;
+  width: 100%;
+  height: 100vh;
   top: 50%;
   left: 50%;
-  margin: -40px 0 0 -142px; /* -40:(22+38+20),-142(バーの長さ/2) */
+  transform: translate(-50%, -50%);
+  background-image: url(../images/back.png);
+  background-size: 96%;
+  background-position: center;
+  background-color: #ba1e1e;
+  position: fixed;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 #load p {
   font-family: "AB-megadot9";
   color: #ba1e1e;
   font-size: 22px;
+  text-align: center;
 }
 .prog-bar {
   width: 284px;
@@ -1066,7 +1130,7 @@ textarea.c-form__input {
     top: 32px;
     right: 8%;
     cursor: pointer;
-    z-index: 9999;
+    z-index: 9998;
   }
   .sp-menu-btn span {
     position: absolute;
@@ -1114,8 +1178,9 @@ textarea.c-form__input {
     width: 95%;
     height: 97vh;
     background-color: #fffffff9;
-    z-index: 9998;
+    z-index: 9997;
     border: 2px solid #ba1e1e;
+    border-radius: 7px;
     /* display: flex;
     flex-direction: column;
     align-items: center;
@@ -1131,7 +1196,7 @@ textarea.c-form__input {
     gap: 32px;
     border: 2px solid #ba1e1e;
     border-radius: 7px;
-    margin: 20px;
+    margin: 13px;
   }
   .sp-nav-border {
     background-color: #fff;
@@ -1139,7 +1204,7 @@ textarea.c-form__input {
     height: 100vh;
     width: 100%;
     position: fixed;
-    z-index: 9998;
+    z-index: 9997;
     box-sizing: border-box;
     display: none;
   }
@@ -1248,6 +1313,24 @@ textarea.c-form__input {
   }
 
   /* ----わたしのこと---- */
+  .name-contents .sns-btn {
+    display: none;
+  }
+
+  .profile-img2 {
+    width: 306px;
+  }
+  .profile-conteiner {
+    width: calc(100%-462px);
+  }
+
+  /* .profile-img2:hover img:first-of-type {
+    pointer-events: none;
+  }
+  .profile-img2:hover img:last-of-type {
+    pointer-events: none;
+  } */
+
   .job-cat {
     font-size: 18px;
     line-height: 1.5;
@@ -1268,7 +1351,11 @@ textarea.c-form__input {
     padding-bottom: 5px;
   }
 
-  /* ----しごと---- */
+  /* ----実績詳細---- */
+  #works1 .high-img,
+  #works6 .high-img {
+    height: auto;
+  }
 
   /* ----サンクスページ---- */
   #thanks .section-title {
@@ -1397,9 +1484,6 @@ textarea.c-form__input {
   .profile-list li:last-child {
     align-items: flex-start;
   }
-  .name-contents .sns-btn {
-    display: none;
-  }
   .profile-img2 {
     width: 100%;
     padding-bottom: 27px;
@@ -1492,6 +1576,10 @@ textarea.c-form__input {
   }
   .works-title h3 {
     padding-bottom: 14px;
+  }
+
+  .high-img {
+    height: auto;
   }
 
   /* ----お問い合わせ---- */
