@@ -2,8 +2,8 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>YUKI OGAWA</title>
 
   <link rel="stylesheet" href="./css/reset.css" />
@@ -12,11 +12,32 @@
   <script>
     (function (d) {
       var config = {
-        kitId: 'dml7sbm',
+        kitId: "dml7sbm",
         scriptTimeout: 3000,
-        async: true
+        async: true,
       },
-        h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+        h = d.documentElement,
+        t = setTimeout(function () {
+          h.className =
+            h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+        }, config.scriptTimeout),
+        tk = d.createElement("script"),
+        f = false,
+        s = d.getElementsByTagName("script")[0],
+        a;
+      h.className += " wf-loading";
+      tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+      tk.async = true;
+      tk.onload = tk.onreadystatechange = function () {
+        a = this.readyState;
+        if (f || (a && a != "complete" && a != "loaded")) return;
+        f = true;
+        clearTimeout(t);
+        try {
+          Typekit.load(config);
+        } catch (e) { }
+      };
+      s.parentNode.insertBefore(tk, s);
     })(document);
   </script>
 
@@ -86,13 +107,11 @@
 
   <div class="works-wrapper">
     <section id="works6" class="page-set section">
-      <h2 class="section-title dotfont-color">
-        ▶︎ しごと
-      </h2>
+      <h2 class="section-title dotfont-color">▶︎ しごと</h2>
       <div class="works-img">
         <picture>
-          <source srcset="images/design_cafe_sp.jpg" media="(max-width:767px)">
-          <img src="images/design_cafe.jpg" alt="DESIGN CAFE" class="high-img">
+          <source srcset="images/design_cafe_sp.jpg" media="(max-width:767px)" />
+          <img src="images/design_cafe.jpg" alt="DESIGN CAFE" class="high-img" />
         </picture>
       </div>
       <div class="works-area">
@@ -102,11 +121,13 @@
           <p class="dotfont-color">2024.04</p>
         </div>
         <p class="works-text">
-          架空のカフェ、DESIGN CAFE様のWEBサイトのコーディングを制作しました。 <br>
+          架空のカフェ、DESIGN CAFE様のWEBサイトのコーディングを制作しました。
+          <br />
           PCとスマートフォンの間にワンクッション置いたレスポンシブ対応をしています。
         </p>
-        <p class="link-text">WEB:
-          <a href="https://design-32.github.io/dezasuta/design_cafe/" class="link-url">
+        <p class="link-text">
+          WEB:
+          <a class="link-url" href="https://design-32.github.io/dezasuta/design_cafe/" target="_blank">
             https://design-32.github.io/dezasuta/design_cafe/</a>
         </p>
       </div>
@@ -129,7 +150,6 @@
       </div>
     </section>
   </div>
-
 
   <section id="contact" class="contact-contents section">
     <div class="box-area">
@@ -215,7 +235,7 @@
       });
     });
 
-    // とびだし
+    // スライドアニメーション
     AOS.init();
   </script>
 </body>

@@ -66,6 +66,7 @@ body {
 
 /* 三角 */
 .nav a {
+  position: relative;
   text-decoration: none;
 }
 .nav a:hover:before {
@@ -77,7 +78,7 @@ body {
   height: 0;
   content: "";
   position: absolute;
-  left: 20px;
+  left: -27px;
 }
 
 .sns-nav {
@@ -193,7 +194,7 @@ body {
   color: #ea80aa;
   line-height: 1.2;
   padding-bottom: 11px;
-  padding-top: 15px;
+  padding-top: 8px;
 }
 .logo-over {
   line-height: 1.2;
@@ -467,15 +468,17 @@ body {
   margin-bottom: 60px;
 }
 .contact-btn a {
-  position: relative;
   display: block;
   font-size: 30px;
 }
+.contact-btn a:hover::before {
+  left: 8px;
+}
 .yes-btn {
-  padding: 30px 30px 22px 60px;
+  padding: 30px 30px 22px 30px;
 }
 .little-btn {
-  padding: 0% 30px 30px 60px;
+  padding: 0% 30px 30px 30px;
 }
 .contact-area h2 {
   padding-top: 70px;
@@ -545,24 +548,24 @@ body {
   gap: 10px;
   width: 462px;
 }
-.profile-img2 {
+/* .profile-img2 {
   width: calc(100% - 462px);
-}
+} */
 
 .profile-img2 {
   position: relative;
 }
-.profile-img2:hover img:first-of-type {
-  opacity: 0;
-}
+
 .profile-img2 img:last-of-type {
   position: absolute;
-  top: 0px;
-  left: 0px;
+  top: 50%; /*追記*/
+  transform: translate(-50%, -50%); /*追記*/
+  left: 50%; /*追記*/
   opacity: 0;
+  transition: 0.3s;
 }
 .profile-img2:hover img:last-of-type {
-  opacity: 1;
+  opacity: 0.8;
 }
 
 .job-cat {
@@ -760,6 +763,18 @@ body {
 /* ----しごと---- */
 .category-list li {
   font-size: 20px;
+  position: relative;
+}
+.category-list li:hover:before {
+  border-top: solid 10px transparent;
+  border-bottom: solid 10px transparent;
+  border-left: solid 17px #ba1e1e;
+  border-right: 0;
+  width: 0;
+  height: 0;
+  content: "";
+  position: absolute;
+  left: -27px;
 }
 .category-list {
   display: flex;
@@ -928,13 +943,20 @@ body {
   color: #494949;
 }
 .link-url {
-  text-decoration: underline;
-  text-underline-offset: 8px;
+  position: relative;
   text-decoration: underline 1px;
-  background-image: url(/images/link.png); /*背景画像のパス*/
+}
+.link-url::after {
+  position: absolute;
+  content: "";
+  width: 16px;
+  height: 16px;
+  text-underline-offset: 8px;
+  background-image: url(../images/link.png); /*背景画像のパス*/
   background-repeat: no-repeat; /*背景画像の繰り返し*/
   background-position: center right; /*背景画像の配置*/
-  padding-right: 30px; /*背景画像を入れる余白をつくる*/
+  padding-right: 10px; /*背景画像を入れる余白をつくる*/
+  background-size: 16px 16px;
 }
 #works6 .works-text {
   padding-bottom: 25px;
@@ -995,7 +1017,7 @@ textarea.c-form__input {
   color: #fff;
   font-size: 29px;
   width: 552px;
-  height: 94px;
+  height: 74px;
   border-radius: 38px;
   display: flex;
   align-items: center;
@@ -1024,7 +1046,7 @@ textarea.c-form__input {
   color: #fff;
   font-size: 29px;
   width: 552px;
-  height: 94px;
+  height: 74px;
   border-radius: 38px;
   display: flex;
   align-items: center;
@@ -1131,21 +1153,24 @@ textarea.c-form__input {
   .tab-br {
     display: block;
   }
+  .profile-block img.tab-br {
+    display: none;
+  }
 
   .sp-menu-btn {
     display: block;
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
     position: fixed;
-    top: 32px;
-    right: 8%;
+    top: 3%;
+    right: 6%;
     cursor: pointer;
     z-index: 9998;
   }
   .sp-menu-btn span {
     position: absolute;
     content: "";
-    width: 50px;
+    width: 30px;
     height: 4px;
     background-color: #ba1e1e;
     top: 25px;
@@ -1154,19 +1179,19 @@ textarea.c-form__input {
   .sp-menu-btn span::before {
     position: absolute;
     content: "";
-    width: 50px;
+    width: 30px;
     height: 4px;
     background-color: #ba1e1e;
-    top: -17px;
+    top: -11px;
     transition: 0.5s;
   }
   .sp-menu-btn span::after {
     position: absolute;
     content: "";
-    width: 50px;
+    width: 30px;
     height: 4px;
     background-color: #ba1e1e;
-    bottom: -17px;
+    bottom: -11px;
     transition: 0.5s;
   }
 
@@ -1202,7 +1227,7 @@ textarea.c-form__input {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-size: 32px;
+    font-size: 25px;
     gap: 32px;
     border: 2px solid #ba1e1e;
     border-radius: 7px;
@@ -1216,6 +1241,12 @@ textarea.c-form__input {
     position: fixed;
     z-index: 9997;
     box-sizing: border-box;
+    display: none;
+  }
+  .nav a:hover {
+    opacity: 1;
+  }
+  .nav a:hover:before {
     display: none;
   }
   .sp-sns-icon {
@@ -1252,7 +1283,11 @@ textarea.c-form__input {
     padding: 10px 4% 10px 29px;
   }
   .contact-btn a {
-    font-size: 25px;
+    font-size: 20px;
+  }
+  .yes-btn,
+  .little-btn {
+    padding-right: 10px;
   }
   /* .box-area {
     margin-bottom: 40px;
@@ -1331,7 +1366,7 @@ textarea.c-form__input {
     width: 306px;
   }
   .profile-conteiner {
-    width: calc(100%-462px);
+    width: calc(100% - 306px - 8%);
   }
 
   /* .profile-img2:hover img:first-of-type {
@@ -1354,6 +1389,12 @@ textarea.c-form__input {
   }
   .name-contents {
     padding-bottom: 5px;
+  }
+  .list-item--height {
+    line-height: 1.3;
+  }
+  .profile-list li {
+    padding-bottom: 12px;
   }
 
   .name-en {
@@ -1378,6 +1419,15 @@ textarea.c-form__input {
     display: block;
   }
   .pc-br {
+    display: none;
+  }
+  .profile-block img.tab-br {
+    display: block;
+  }
+  .profile-img2:hover img:first-of-type {
+    opacity: 1;
+  }
+  .profile-img2:hover img:last-of-type {
     display: none;
   }
 
@@ -1411,6 +1461,9 @@ textarea.c-form__input {
   }
 
   /* わたしのこと */
+  .profile-conteiner {
+    width: 100%;
+  }
   .about-area {
     display: block;
   }
@@ -1561,11 +1614,13 @@ textarea.c-form__input {
     flex-wrap: wrap;
     gap: 12%;
     row-gap: 41px;
-    padding-left: 15%;
   }
   .category-list li {
     font-size: 18px;
     width: 44%;
+  }
+  .category-list li:hover:before {
+    display: none;
   }
   .works-img-area {
     flex-direction: column;
@@ -1607,7 +1662,7 @@ textarea.c-form__input {
 
   .c-form__submit button {
     font-size: 16px;
-    width: 100%;
+    width: 80%;
     height: 53px;
   }
   .c-form__submit {
@@ -1624,7 +1679,7 @@ textarea.c-form__input {
   }
   .back-btn a {
     font-size: 16px;
-    width: 100%;
+    width: 80%;
     height: 53px;
   }
 }
