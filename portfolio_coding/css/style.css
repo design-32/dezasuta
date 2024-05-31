@@ -1396,8 +1396,6 @@ textarea.c-form__input {
   }
   .profile-list li {
     padding-bottom: 12px;
-  }
-  .profile-list li {
     align-items: flex-start;
   }
 
