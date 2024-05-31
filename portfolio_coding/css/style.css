@@ -1397,6 +1397,9 @@ textarea.c-form__input {
   .profile-list li {
     padding-bottom: 12px;
   }
+  .profile-list li {
+    align-items: flex-start;
+  }
 
   .name-en {
     font-size: 30px;
@@ -1544,9 +1547,6 @@ textarea.c-form__input {
     flex-direction: column;
     align-items: stretch;
     padding: 0 16px 59px;
-  }
-  .profile-list li:last-child {
-    align-items: flex-start;
   }
   .profile-img2 {
     width: 100%;
