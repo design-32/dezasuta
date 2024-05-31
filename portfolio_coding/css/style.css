@@ -467,14 +467,15 @@ body {
   margin-bottom: 60px;
 }
 .contact-btn a {
+  position: relative;
   display: block;
   font-size: 30px;
 }
 .yes-btn {
-  padding: 30px 30px 22px 30px;
+  padding: 30px 30px 22px 60px;
 }
 .little-btn {
-  padding: 0% 30px 30px 30px;
+  padding: 0% 30px 30px 60px;
 }
 .contact-area h2 {
   padding-top: 70px;
@@ -781,10 +782,19 @@ body {
 .panel {
   display: none;
 }
-.panel .active {
+.panel.active {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  animation: fade 0.5s linear forwards;
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .category-area p {
   font-size: 30px;
@@ -1551,6 +1561,7 @@ textarea.c-form__input {
     flex-wrap: wrap;
     gap: 12%;
     row-gap: 41px;
+    padding-left: 15%;
   }
   .category-list li {
     font-size: 18px;

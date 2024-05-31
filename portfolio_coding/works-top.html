@@ -2,24 +2,47 @@
 <html lang="ja">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>YUKI OGAWA</title>
 
-  <link rel="stylesheet" href="./css/reset.css">
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/reset.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/style.css" />
   <script>
     (function (d) {
       var config = {
-        kitId: 'dml7sbm',
+        kitId: "dml7sbm",
         scriptTimeout: 3000,
-        async: true
+        async: true,
       },
-        h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+        h = d.documentElement,
+        t = setTimeout(function () {
+          h.className =
+            h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+        }, config.scriptTimeout),
+        tk = d.createElement("script"),
+        f = false,
+        s = d.getElementsByTagName("script")[0],
+        a;
+      h.className += " wf-loading";
+      tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+      tk.async = true;
+      tk.onload = tk.onreadystatechange = function () {
+        a = this.readyState;
+        if (f || (a && a != "complete" && a != "loaded")) return;
+        f = true;
+        clearTimeout(t);
+        try {
+          Typekit.load(config);
+        } catch (e) { }
+      };
+      s.parentNode.insertBefore(tk, s);
     })(document);
   </script>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 
 <body>
@@ -83,9 +106,7 @@
   </header>
 
   <section id="works" class="page-set section">
-    <h2 class="section-title dotfont-color">
-      ▶︎ しごと
-    </h2>
+    <h2 class="section-title dotfont-color">▶︎ しごと</h2>
     <div class="category-area">
       <p class="dotfont-color">カテゴリー</p>
       <div class="border">
@@ -100,29 +121,27 @@
 
     <!-- 実績写真 -->
     <div class="works-img-area panel active">
-      <a href="works6.html#works6"><img src="images/kadai6.jpg" alt="課題6" class="works-area-img"></a>
-      <a href="works5.html#works5"><img src="images/kadai5.jpg" alt="課題5" class="works-area-img"></a>
-      <a href="works4.html#works4"><img src="images/kadai4.jpg" alt="課題4" class="works-area-img"></a>
-      <a href="works3.html#works3"><img src="images/kadai3.jpg" alt="課題3" class="works-area-img"></a>
-      <a href="works2.html#works2"><img src="images/kadai2.jpg" alt="課題2" class="works-area-img"></a>
-      <a href="works1.html#works1"><img src="images/kadai1.jpg" alt="課題1" class="works-area-img"></a>
+      <a href="works6.html#works6"><img src="images/kadai6.jpg" alt="課題6" class="works-area-img" /></a>
+      <a href="works5.html#works5"><img src="images/kadai5.jpg" alt="課題5" class="works-area-img" /></a>
+      <a href="works4.html#works4"><img src="images/kadai4.jpg" alt="課題4" class="works-area-img" /></a>
+      <a href="works3.html#works3"><img src="images/kadai3.jpg" alt="課題3" class="works-area-img" /></a>
+      <a href="works2.html#works2"><img src="images/kadai2.jpg" alt="課題2" class="works-area-img" /></a>
+      <a href="works1.html#works1"><img src="images/kadai1.jpg" alt="課題1" class="works-area-img" /></a>
     </div>
     <div class="works-img-area panel">
-      <a href="works5.html#works5"><img src="images/kadai5.jpg" alt="課題5" class="works-area-img"></a>
-      <a href="works4.html#works4"><img src="images/kadai4.jpg" alt="課題4" class="works-area-img"></a>
-
+      <a href="works5.html#works5"><img src="images/kadai5.jpg" alt="課題5" class="works-area-img" /></a>
+      <a href="works4.html#works4"><img src="images/kadai4.jpg" alt="課題4" class="works-area-img" /></a>
     </div>
     <div class="works-img-area panel">
-      <a href="works2.html#works2"><img src="images/kadai2.jpg" alt="課題2" class="works-area-img"></a>
-      <a href="works1.html#works1"><img src="images/kadai1.jpg" alt="課題1" class="works-area-img"></a>
+      <a href="works2.html#works2"><img src="images/kadai2.jpg" alt="課題2" class="works-area-img" /></a>
+      <a href="works1.html#works1"><img src="images/kadai1.jpg" alt="課題1" class="works-area-img" /></a>
     </div>
 
     <div class="works-img-area panel">
-      <a href="works6.html#works6"><img src="images/kadai6.jpg" alt="課題6" class="works-area-img"></a>
-
+      <a href="works6.html#works6"><img src="images/kadai6.jpg" alt="課題6" class="works-area-img" /></a>
     </div>
 
-    <ul class=" pagination">
+    <ul class="pagination">
       <a href="">
         <li class="btn-text dotfont">&lt;</li>
       </a>
@@ -134,6 +153,7 @@
       </a>
     </ul>
   </section>
+
 
   <section id="contact" class="contact-contents section">
     <div class="box-area">
@@ -149,7 +169,7 @@
         <span class="question-line question-line08"></span>
         <span class="question-line question-line09"></span>
       </div>
-      <div class="border-box">
+      <div data-aos="fade-right" data-aos-delay="300" class="border-box">
         <p class="dotfont-color">
           あ！　まだ見ぬ<br />
           ぼうけんが　とびだしてきた！
@@ -157,17 +177,17 @@
       </div>
     </div>
     <div class="contact-area">
-      <h2 class="contact-heading dotfont">▶︎ お問い合わせ</h2>
+      <h2 class="contact-heading dotfont">お問い合わせ</h2>
       <p>
-        お仕事のご依頼やご相談（オンラインも可能）、<br />
-        「一緒にこんなことやってみない？」など<br />
-        お気軽にご連絡いただけると嬉しいです。<br />
-        お問合わせお待ちしております。<br />
+        お仕事のご依頼やご相談（オンラインも可能）、<br class="pc-br" />
+        「一緒にこんなことやってみない？」など<br class="pc-br" />
+        お気軽にご連絡いただけると嬉しいです。<br class="pc-br" />
+        お問合わせお待ちしております。<br class="pc-br" />
       </p>
       <div class="contact-box border">
-        <div class="contact-btn">
-          <a href="./contact.html" class="dotfont-color"> する </a>
-          <a href="./contact.html"> ちょっとしてみる </a>
+        <div class="contact-btn nav">
+          <a href="./contact.html" class="yes-btn dotfont-color"> する </a>
+          <a href="./contact.html" class="little-btn"> ちょっとしてみる </a>
         </div>
       </div>
     </div>
@@ -221,15 +241,18 @@
 
     // タブ切り替え
     $(function () {
-      $('.tab').on('click', function () {
-        $('.tab, .panel').removeClass('active');
+      $(".tab").on("click", function () {
+        $(".tab, .panel").removeClass("active");
 
-        $(this).addClass('active');
+        $(this).addClass("active");
 
-        var index = $('.tab').index(this);
-        $('.panel').eq(index).addClass('active');
+        var index = $(".tab").index(this);
+        $(".panel").eq(index).addClass("active");
       });
     });
+
+    // とびだし
+    AOS.init();
   </script>
 </body>
 

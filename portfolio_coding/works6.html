@@ -6,8 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>YUKI OGAWA</title>
 
-  <link rel="stylesheet" href="./css/reset.css">
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/reset.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/style.css" />
   <script>
     (function (d) {
       var config = {
@@ -20,6 +21,7 @@
   </script>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 
 <body>
@@ -128,6 +130,7 @@
     </section>
   </div>
 
+
   <section id="contact" class="contact-contents section">
     <div class="box-area">
       <div class="question-box">
@@ -142,7 +145,7 @@
         <span class="question-line question-line08"></span>
         <span class="question-line question-line09"></span>
       </div>
-      <div class="border-box">
+      <div data-aos="fade-right" data-aos-delay="300" class="border-box">
         <p class="dotfont-color">
           あ！　まだ見ぬ<br />
           ぼうけんが　とびだしてきた！
@@ -150,17 +153,17 @@
       </div>
     </div>
     <div class="contact-area">
-      <h2 class="contact-heading dotfont">▶︎ お問い合わせ</h2>
+      <h2 class="contact-heading dotfont">お問い合わせ</h2>
       <p>
-        お仕事のご依頼やご相談（オンラインも可能）、<br />
-        「一緒にこんなことやってみない？」など<br />
-        お気軽にご連絡いただけると嬉しいです。<br />
-        お問合わせお待ちしております。<br />
+        お仕事のご依頼やご相談（オンラインも可能）、<br class="pc-br" />
+        「一緒にこんなことやってみない？」など<br class="pc-br" />
+        お気軽にご連絡いただけると嬉しいです。<br class="pc-br" />
+        お問合わせお待ちしております。<br class="pc-br" />
       </p>
       <div class="contact-box border">
-        <div class="contact-btn">
-          <a href="./contact.html" class="dotfont-color"> する </a>
-          <a href="./contact.html"> ちょっとしてみる </a>
+        <div class="contact-btn nav">
+          <a href="./contact.html" class="yes-btn dotfont-color"> する </a>
+          <a href="./contact.html" class="little-btn"> ちょっとしてみる </a>
         </div>
       </div>
     </div>
@@ -211,6 +214,9 @@
         $(".sp-nav, .sp-nav-border").fadeToggle();
       });
     });
+
+    // とびだし
+    AOS.init();
   </script>
 </body>
 

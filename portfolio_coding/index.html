@@ -7,6 +7,7 @@
   <title>YUKI OGAWA</title>
 
   <link rel="stylesheet" href="./css/reset.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <link rel="stylesheet" href="./css/style.css" />
   <script>
     (function (d) {
@@ -40,7 +41,7 @@
     })(document);
   </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 
 <body>
@@ -228,7 +229,7 @@
         <span class="question-line question-line08"></span>
         <span class="question-line question-line09"></span>
       </div>
-      <div data-aos="fade-right" class="border-box">
+      <div data-aos="fade-right" data-aos-delay="300" class="border-box">
         <p class="dotfont-color">
           あ！　まだ見ぬ<br />
           ぼうけんが　とびだしてきた！
@@ -238,10 +239,10 @@
     <div class="contact-area">
       <h2 class="contact-heading dotfont">お問い合わせ</h2>
       <p>
-        お仕事のご依頼やご相談（オンラインも可能）、<br class="pc-br">
-        「一緒にこんなことやってみない？」など<br class="pc-br">
-        お気軽にご連絡いただけると嬉しいです。<br class="pc-br">
-        お問合わせお待ちしております。<br class="pc-br">
+        お仕事のご依頼やご相談（オンラインも可能）、<br class="pc-br" />
+        「一緒にこんなことやってみない？」など<br class="pc-br" />
+        お気軽にご連絡いただけると嬉しいです。<br class="pc-br" />
+        お問合わせお待ちしております。<br class="pc-br" />
       </p>
       <div class="contact-box border">
         <div class="contact-btn nav">
@@ -298,24 +299,25 @@
       });
     });
 
-
+    // とびだし
     AOS.init();
 
     // ふわっ
-    $(window).scroll(function () {
-      fadeAnime();/* アニメーション用の関数を呼ぶ*/
-    });// ここまで画面をスクロールをしたら動かしたい場合の記述
+    // $(window).scroll(function () {
+    //   fadeAnime(); /* アニメーション用の関数を呼ぶ*/
+    // }); // ここまで画面をスクロールをしたら動かしたい場合の記述
 
-    $('.fadeLeftTrigger').each(function () { //fadeLeftTriggerというクラス名が
-      var elemPos = $(this).offset().top - 50;//要素より、50px上の
-      var scroll = $(window).scrollTop();
-      var windowHeight = $(window).height();
-      if (scroll >= elemPos - windowHeight) {
-        $(this).addClass('fadeLeft');// 画面内に入ったらfadeLeftというクラス名を追記
-      } else {
-        $(this).removeClass('fadeLeft');// 画面外に出たらfadeLeftというクラス名を外す
-      }
-    });
+    // $(".fadeLeftTrigger").each(function () {
+    //   //fadeLeftTriggerというクラス名が
+    //   var elemPos = $(this).offset().top - 50; //要素より、50px上の
+    //   var scroll = $(window).scrollTop();
+    //   var windowHeight = $(window).height();
+    //   if (scroll >= elemPos - windowHeight) {
+    //     $(this).addClass("fadeLeft"); // 画面内に入ったらfadeLeftというクラス名を追記
+    //   } else {
+    //     $(this).removeClass("fadeLeft"); // 画面外に出たらfadeLeftというクラス名を外す
+    //   }
+    // });
   </script>
 </body>
 
