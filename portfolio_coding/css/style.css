@@ -779,7 +779,7 @@ body {
 .category-list {
   display: flex;
   justify-content: center;
-  gap: 15%;
+  gap: 12%;
   background-color: #ffffff;
   border: 2px solid #ba1e1e;
   border-radius: 7px;
@@ -816,7 +816,7 @@ body {
   position: absolute;
   top: -15px;
   z-index: 5;
-  left: 85px;
+  left: 79px;
 }
 .category-area {
   padding-bottom: 83px;
@@ -825,7 +825,7 @@ body {
 .category-area::before {
   position: absolute;
   content: "";
-  width: 250px;
+  width: 226px;
   height: 50px;
   background-color: #fff;
   left: 45px;
@@ -945,6 +945,7 @@ body {
 .link-url {
   position: relative;
   text-decoration: underline 1px;
+  text-underline-offset: 8px;
 }
 .link-url::after {
   position: absolute;
@@ -1449,8 +1450,8 @@ textarea.c-form__input {
   .top-area h1 {
     font-size: 69px;
   }
-  .logo-under {
-    padding-top: 10px;
+  .top-area .logo-under {
+    padding-top: 7px;
   }
   .job-cat-header {
     font-size: 18px;
@@ -1610,10 +1611,20 @@ textarea.c-form__input {
   }
 
   /* ----しごと---- */
+  .category-area p {
+    font-size: 24px;
+    top: -10px;
+    left: 61px;
+  }
+
+  .category-area::before {
+    width: 156px;
+  }
   .category-list {
     flex-wrap: wrap;
-    gap: 12%;
+    gap: 4%;
     row-gap: 41px;
+    padding-left: 9%;
   }
   .category-list li {
     font-size: 18px;
