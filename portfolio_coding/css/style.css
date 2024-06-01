@@ -1362,6 +1362,10 @@ textarea.c-form__input {
     pointer-events: none;
   } */
 
+  .profile-contents {
+    width: auto;
+  }
+
   .job-cat {
     font-size: 18px;
     line-height: 1.5;
